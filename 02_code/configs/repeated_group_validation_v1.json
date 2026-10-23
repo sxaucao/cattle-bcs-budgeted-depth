@@ -1,0 +1,92 @@
+{
+  "exploratory": true,
+  "status": "Protocol saved before these repeated-split outcomes; all data remain the previously explored source, not an external or confirmatory cohort.",
+  "repeat_seeds": [
+    6121,
+    6122,
+    6123
+  ],
+  "outer_folds": 3,
+  "outer_candidates": 100,
+  "outer_selection": "Among label-only stratified-group candidates choose lexicographically fewest missing test classes, then lowest squared class-proportion imbalance; save candidates and final assignments before fitting. No descriptors, predictions or errors enter split selection.",
+  "inner_validation": {
+    "fraction_groups": 0.22,
+    "seed": 2010023,
+    "candidate_count": 2000
+  },
+  "frame_policy": "Identical deduplicated input pool and up-to-12 frames; nested temporal 1/3/6/12 depth descriptors from experiment28, frozen DINOv2; no reprocessing choices based on errors.",
+  "base_grid": {
+    "bandwidth_scale": [
+      0.5,
+      1,
+      2
+    ],
+    "alpha": [
+      0.01,
+      0.1,
+      1,
+      10
+    ]
+  },
+  "gate_grid": {
+    "bandwidth_scale": [
+      0.5,
+      1,
+      2
+    ],
+    "alpha": [
+      0.01,
+      0.1,
+      1,
+      10,
+      100
+    ]
+  },
+  "budget_caps": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "primary_method": "Binary_strict_crossfit",
+  "teacher_crossfit": "Exclude the held training animal from fitting AND reselect teacher SVR hyperparameters on the unchanged inner-validation animals after exclusion. Frozen full-training-selected parameter identities are a separate ablation.",
+  "gate_selection": "Mean inner-validation MAE at caps .25/.5/.75; no outer test selection",
+  "methods": [
+    "RGB_only",
+    "RGBD_all",
+    "Fixed_depth_1",
+    "Fixed_depth_3",
+    "Fixed_depth_6",
+    "Binary_strict_crossfit",
+    "Binary_frozen_teacher",
+    "Binary_insample",
+    "Binary_shuffled",
+    "Binary_RGB_error",
+    "Binary_greedy",
+    "Multilevel_strict_crossfit",
+    "Probe_strict_crossfit"
+  ],
+  "primary_endpoint": "For each repeat, average pooled-event MAE at .25/.5/.75 caps. Repeats summarised without choosing a best seed.",
+  "statistics": "Average paired episode errors across repeats first; 10000 fixed-model animal-cluster bootstrap resamples; repeats and folds are not independent biological replicates.",
+  "static_baselines": "Fixed-depth and full-RGBD baselines always report actual resource cost. Mark infeasible comparisons explicitly when their fixed cost exceeds a stated cap; do not silently claim budget feasibility.",
+  "metrics": [
+    "MAE",
+    "RMSE",
+    "bias",
+    "R2",
+    "Spearman",
+    "rounded_accuracy",
+    "rounded_macro_F1",
+    "rounded_QWK",
+    "within_0.5",
+    "within_1.0",
+    "absolute_error_ge_2",
+    "animal_mean_MAE",
+    "class_mean_MAE",
+    "depth_frames",
+    "frame_call_reduction",
+    "all_event_output_fraction"
+  ],
+  "stop_rule": "Retain all 3 seeds and all methods; do not add repeats or choose a new primary method after looking at outcomes. If the proposed method is unstable, report this as exploratory evidence rather than claiming a confirmed advance."
+}

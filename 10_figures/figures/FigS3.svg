@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="493.228346456693" height="198.42519685039372" preserveAspectRatio="xMinYMin meet" viewBox="0 0 493 198" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="493.228346456693" height="198.42519685039372"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-198)" style="clip-path: url(#clip)">
+		<g transform="">
+			<path d="M 34,40 L 480,40 Z" style="stroke: rgb(86%,86%,86%); stroke-linecap: butt; stroke-width: 0.4;"/>
+			<text x="25.0" y="37.5" style="font-family: TNR; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,75) scale(1,-1)">0</text>
+			<path d="M 34,72.5 L 480,72.5 Z" style="stroke: rgb(86%,86%,86%); stroke-linecap: butt; stroke-width: 0.4;"/>
+			<text x="21.0" y="70.0" style="font-family: TNR; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,140) scale(1,-1)">25</text>
+			<path d="M 34,105 L 480,105 Z" style="stroke: rgb(86%,86%,86%); stroke-linecap: butt; stroke-width: 0.4;"/>
+			<text x="21.0" y="102.5" style="font-family: TNR; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,205) scale(1,-1)">50</text>
+			<path d="M 34,137.5 L 480,137.5 Z" style="stroke: rgb(86%,86%,86%); stroke-linecap: butt; stroke-width: 0.4;"/>
+			<text x="21.0" y="135.0" style="font-family: TNR; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,270) scale(1,-1)">75</text>
+			<path d="M 34,170 L 480,170 Z" style="stroke: rgb(86%,86%,86%); stroke-linecap: butt; stroke-width: 0.4;"/>
+			<text x="17.0" y="167.5" style="font-family: TNR; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,335) scale(1,-1)">100</text>
+			<path d="M 34,40 L 480,40 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<path d="M 34,40 L 34,170 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="210.516845703125" y="12" style="font-family: TNR; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,24) scale(1,-1)">Chosen depth-frame level</text>
+			<text x="34" y="175" style="font-family: TNR; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,350) scale(1,-1)">Mean number of events</text>
+			<rect x="61.099999999999994" y="40.0" width="16.0" height="60.23333333333335" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(11%,35%,50%); fill-rule: evenodd;"/>
+			<rect x="150.3" y="40.0" width="16.0" height="68.9" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(11%,35%,50%); fill-rule: evenodd;"/>
+			<rect x="239.5" y="40.0" width="16.0" height="26.433333333333337" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(11%,35%,50%); fill-rule: evenodd;"/>
+			<rect x="328.7" y="40.0" width="16.0" height="28.16666666666667" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(11%,35%,50%); fill-rule: evenodd;"/>
+			<rect x="417.9" y="40.0" width="16.0" height="12.566666666666663" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(11%,35%,50%); fill-rule: evenodd;"/>
+			<path d="M 34,188 L 51,188 Z" style="stroke: rgb(11%,35%,50%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="57" y="185" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,370) scale(1,-1)">Depth cap 0.25</text>
+			<rect x="80.1" y="40.0" width="16.0" height="48.099999999999994" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(70%,36%,20%); fill-rule: evenodd;"/>
+			<rect x="169.3" y="40.0" width="16.0" height="50.26666666666665" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(70%,36%,20%); fill-rule: evenodd;"/>
+			<rect x="258.5" y="40.0" width="16.0" height="19.5" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(70%,36%,20%); fill-rule: evenodd;"/>
+			<rect x="347.7" y="40.0" width="16.0" height="49.400000000000006" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(70%,36%,20%); fill-rule: evenodd;"/>
+			<rect x="436.9" y="40.0" width="16.0" height="29.03333333333333" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(70%,36%,20%); fill-rule: evenodd;"/>
+			<path d="M 214,188 L 231,188 Z" style="stroke: rgb(70%,36%,20%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="237" y="185" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,370) scale(1,-1)">Depth cap 0.5</text>
+			<text x="76.6" y="27" style="font-family: TNR; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,54) scale(1,-1)">0</text>
+			<text x="165.8" y="27" style="font-family: TNR; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,54) scale(1,-1)">1</text>
+			<text x="255.0" y="27" style="font-family: TNR; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,54) scale(1,-1)">3</text>
+			<text x="344.2" y="27" style="font-family: TNR; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,54) scale(1,-1)">6</text>
+			<text x="431.4" y="27" style="font-family: TNR; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,54) scale(1,-1)">12</text>
+		</g>
+	</g>
+</svg>

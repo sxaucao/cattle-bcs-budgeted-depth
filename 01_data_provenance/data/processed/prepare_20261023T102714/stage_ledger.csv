@@ -1,0 +1,13 @@
+﻿stage,operation,unit,input,output,excluded,evidence,status
+H0,Historical synchronized frame extraction,RGB-D pairs,,5940,,previous_article_sec_2.1.1_Table1,reported_not_file_reconstructed
+H1,Historical manual availability screening,RGB-D pairs,5940,3815,2125,previous_article_sec_2.1.1_Table1,reported_no_per_pair_exclusion_manifest_found_in_supplied_project
+S0,Supplied prepared source inventory,files,7630,7630,0,files_manifest.csv,measured
+S1,Copy and SHA-256 verification,files,7630,7630,0,files_manifest.csv,measured
+S2,Unambiguous RGB-depth pairing,RGB-D pairs,3815,3815,0,pairs_audit.csv;issues.csv,measured
+S3,"Decode, numeric-depth and metadata audit",RGB-D pairs,3815,2802,1013,pairs_audit.csv;issues.csv,measured_flagged_not_deleted
+S4,Episode and animal-group indexing,episodes / animal groups,3815,151 / 52,0,episodes_audit.csv,measured_grouping_inherited
+R0,Resolve native-size flags for independent modality encoders,RGB-D pairs,3815,3815,0,all_pairs_to_visual_pool.csv;preprocessing_v1.json,documented_no_pixel_alignment_claim
+P0,Within-episode identical RGB consolidation for primary sampling pool,visual observations,3815,3177,638,all_pairs_to_visual_pool.csv,consolidated_source_files_retained
+P1,Letterbox and valid-depth percentile normalisation,visual observations,3177,3177,0,preprocessed_manifest.csv,measured
+P2,Episode cohort after preprocessing,episodes / animal groups,3815,151 / 52,0,episodes.csv,no_quality_gating
+P3,Outer test membership with disjoint inner validation groups,episode-role assignments across 3 rounds,151,453,0,group_splits.csv;split_counts.csv,each_episode_tested_once_reused_for_training_in_other_rounds

@@ -1,0 +1,494 @@
+{
+  "created_utc": "2026-10-23T10:26:25.211264+00:00",
+  "original_project_preserved": true,
+  "new_project_paths": "Relative to repository root",
+  "numeric_arrays_changed": false,
+  "raw_file_bytes_changed": false,
+  "copied_files": 8732,
+  "immutable_hardlinked_files": 8224,
+  "metadata_rewrites": [
+    {
+      "source_relative": "analysis/final_metrics_20261023T155032/all_test_predictions.csv",
+      "destination_relative": "07_statistics/analysis/final_metrics_20261023T155032/all_test_predictions.csv",
+      "original_SHA256": "90d8815b44eb0db9929be6517eb21249a27f1d74d23d29db791bd349add54826",
+      "new_SHA256": "6a15455a6afa479552601525d6c8044483720cf6933239f18c58ae83d0a6dffd",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "analysis/final_metrics_20261023T155032/verification.json",
+      "destination_relative": "07_statistics/analysis/final_metrics_20261023T155032/verification.json",
+      "original_SHA256": "9f2eedba55438562bf966942bbde02aa81b9792ec639139f6584573d5ac2f888",
+      "new_SHA256": "5e8206c2f519329501cddffaf6452c81588d2c26339f5611dc6f0507ed51a160",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "analysis/final_metrics_20261023T161439/all_test_predictions.csv",
+      "destination_relative": "07_statistics/analysis/final_metrics_20261023T161439/all_test_predictions.csv",
+      "original_SHA256": "33c1770733cab662eb263ae8304fa2e5943a00b40d31bbc4f3d3ae0d9308286c",
+      "new_SHA256": "6848ad161e06bc8e73f04c9f4d3c6ad92a30e3f322a4456387a79d6a60538bae",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "analysis/final_metrics_20261023T161439/verification.json",
+      "destination_relative": "07_statistics/analysis/final_metrics_20261023T161439/verification.json",
+      "original_SHA256": "3802c843c63db630e9f17c8dc95db9da90375fade071aaf5673ae8c4e2367ee6",
+      "new_SHA256": "f4c94d6528b780aef7539227b113c28821d3f55407f5176c312e15dcb7585a89",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/active_acquisition_v1.json",
+      "destination_relative": "02_code/configs/active_acquisition_v1.json",
+      "original_SHA256": "74b78144cdf2dbf1539f655c65a2657ca548d6f77330bc396e3cb0b1bf1eea04",
+      "new_SHA256": "587a84557c3cd721796e23bf2149375b956b7ba9757144352f005ada97a01ada",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/bidirectional_residual_v1.json",
+      "destination_relative": "02_code/configs/bidirectional_residual_v1.json",
+      "original_SHA256": "b6d211c901148c764feed2f7354d640abdaf13a3ee3eeea52d870f87d6357764",
+      "new_SHA256": "535c7282f8fe3aff7e9911a60d3bda3eb21851c502fdc319026a8805b9d5a3cf",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/complementary_kernel_v1.json",
+      "destination_relative": "02_code/configs/complementary_kernel_v1.json",
+      "original_SHA256": "b9bd440587e4bb29a18d2f049ee3e9895660a3ea08beff011651371b3295a33b",
+      "new_SHA256": "0c5b20da171952068342827c4223b49718bc5b8cdb6815b523348a2f035e98dd",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/crossfit_residual_v1.json",
+      "destination_relative": "02_code/configs/crossfit_residual_v1.json",
+      "original_SHA256": "788557f7d0f35e89bad31589d5e80daa76c3ee93853fcff898ae3a944353942a",
+      "new_SHA256": "9f3172c81a6fdd38c9a5873c35a41400b40d4468778520c1b066b4cdee830a16",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/data_protocol_v1.json",
+      "destination_relative": "02_code/configs/data_protocol_v1.json",
+      "original_SHA256": "e6078d56826130e2f61bb4795a00e62cc7d6ba7792e59eecfab613c56b4c8005",
+      "new_SHA256": "df146119eba2ea41a50d95188abdaa1d2b665fb8c5752f314514cee418265e00",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/decision_profile_v1.json",
+      "destination_relative": "02_code/configs/decision_profile_v1.json",
+      "original_SHA256": "b9c204000d174036f58df99f53dc1bef556a9660c012e2d481f87c0083f16ec7",
+      "new_SHA256": "8e3a992a2a966a3da709e28313849628b931be89f26e3eae2be47a722eb6fb98",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/depth_stress_v1.json",
+      "destination_relative": "02_code/configs/depth_stress_v1.json",
+      "original_SHA256": "49101faf91bee5e8805f9edeb32e3f4508ca50d8914862bacd73d460a025915d",
+      "new_SHA256": "f94a140e67918138b3c80e1726fb2dddff6dfc3a6a3a24c1d9da0746136ff8e2",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/development_experiment_v2.json",
+      "destination_relative": "02_code/configs/development_experiment_v2.json",
+      "original_SHA256": "97027ca2bbfbf9bbabb71a47384511b3a7bb456fae1e60eb9366a607c8c52fc0",
+      "new_SHA256": "4ce1b64b3a00626df7c9030e39ff3aed92bb2225ace1764688b5a00356eb4a6a",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/development_experiment_v3.json",
+      "destination_relative": "02_code/configs/development_experiment_v3.json",
+      "original_SHA256": "be34540beca77cf277ae5e45558c4709482fef1521d3ed20a88f8c54ab6d4081",
+      "new_SHA256": "c73b1a06b53f876d3e835803a237f774f05739e34d0ff6bf21e64d7fcc7fa34a",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/distributional_episode_v1.json",
+      "destination_relative": "02_code/configs/distributional_episode_v1.json",
+      "original_SHA256": "b320ea1f8af69a22a4fccc1f4fc9fe9dff674fcc705cb7fc24ae9f541e06ea15",
+      "new_SHA256": "4a420a7cd6872a25a290d74ced196f7617395d71e593909dd8d7c8b897951583",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/external_validation_v1.json",
+      "destination_relative": "02_code/configs/external_validation_v1.json",
+      "original_SHA256": "34eaa5ea9a9818bfe5f3fa6df0b80e9aef22ebff7febba29e2e2bd8204a0a3df",
+      "new_SHA256": "a0ef4bd61082b6d2ea9932017c71abd6ba571b3b9ad68f71be57e34ff0dde9e4",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/formal_experiment_v1.json",
+      "destination_relative": "02_code/configs/formal_experiment_v1.json",
+      "original_SHA256": "6f314f2327a607719ebf382471e8ee54d3653b967be2ddf10c84b827f031e309",
+      "new_SHA256": "12507a02e0bad382895ddc189d0ef904ad50932672aaa4fd3348758368b69867",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/foundation_pooling_v1.json",
+      "destination_relative": "02_code/configs/foundation_pooling_v1.json",
+      "original_SHA256": "fe4a3d86a9d856521979af7d0dbf5e83ac64d4efd22fdd300e2f168593e8370e",
+      "new_SHA256": "56900d9e2155ba969b44bfdde5e9ca57f5f89d5bd76b38b653ce8d64094366e3",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/group_facility_acquisition_v1.json",
+      "destination_relative": "02_code/configs/group_facility_acquisition_v1.json",
+      "original_SHA256": "0ffdc026021d93f5bba545a4721b4c4a4ce1bdcf8484b4372fbd57f5915ee0f7",
+      "new_SHA256": "e7698a6cf23ba4154d3b2ae89db993a75762e715290228c55ace1ec321be693e",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/imputed_value_baseline_v1.json",
+      "destination_relative": "02_code/configs/imputed_value_baseline_v1.json",
+      "original_SHA256": "239b150754308adfdc9b42717d871590a1dc12bf9b8aff51665c9ddfce790a99",
+      "new_SHA256": "a54698db8b12b1e61a4c9ce35851924dff8922936055e30ed34df516d1f449ed",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/matched_budget_controls_v1.json",
+      "destination_relative": "02_code/configs/matched_budget_controls_v1.json",
+      "original_SHA256": "d43ab7cd163f07b62e3f0c50aa6d023379b30db39c2c5a8150339ff34989d076",
+      "new_SHA256": "a433dff0fcea73c12ead9095a9aba41a3802ef05327d16641c2ade19411373a2",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/multilevel_depth_v1.json",
+      "destination_relative": "02_code/configs/multilevel_depth_v1.json",
+      "original_SHA256": "a1edd6bfc59d1e8b4f8162a066348b0f9e170bf192c36ae3e3ec6658b00548fa",
+      "new_SHA256": "8c992a462e6890f1e6aa5b358e607698074641466c0eebe94df98ac10d14f29d",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/ordinal_kernel_fusion_v1.json",
+      "destination_relative": "02_code/configs/ordinal_kernel_fusion_v1.json",
+      "original_SHA256": "1b6b37ad583acc1c63636ac632ec37cca9b78b5e1170e7fafa4544dd99541316",
+      "new_SHA256": "ea3f5158918be140878e5764b6df9340c987e32a3754d155ff0f82019f2259fc",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/pilot_v1.json",
+      "destination_relative": "02_code/configs/pilot_v1.json",
+      "original_SHA256": "bf415e0b9140fb0b5ea75f8ac9d0d91e08c76e28bcb844d9403e427470467626",
+      "new_SHA256": "67457a2c61d4c656e3fcc58a16eb9ba0b26c306458c4b6e4e975bf76b3b08011",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/preprocessing_v1.json",
+      "destination_relative": "02_code/configs/preprocessing_v1.json",
+      "original_SHA256": "bbec3e1371322861e94b4205d9d43864fd23bfa40475748de95c836e40dd4c2f",
+      "new_SHA256": "5d3b2621ead3e4166b705691b2dff4493eff1cb8686cd45eb502521877a5491b",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/privileged_graph_v1.json",
+      "destination_relative": "02_code/configs/privileged_graph_v1.json",
+      "original_SHA256": "0b16ab9ac1b4744830f43a73effdee5457e1996988240a0cfa6a079f2c81b890",
+      "new_SHA256": "2dd5e667bccd4026098c8e343a8d43381b7c0ad5c79895c48a0a34707dcdac8b",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/probe_refine_v1.json",
+      "destination_relative": "02_code/configs/probe_refine_v1.json",
+      "original_SHA256": "def1d070e930dfed0ceca8ce77ab4c2fac0e7efab77ee97c00b8c7367ec8b15e",
+      "new_SHA256": "df26e20f678a5180ece9c68d1c125daeebde40c0da044647ebe2df2026a553e0",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/relief_encoding_v1.json",
+      "destination_relative": "02_code/configs/relief_encoding_v1.json",
+      "original_SHA256": "c1caf0f88ab3cfec2566b91fa3e6829a819c955aee61be2dada2142f2a98d0b0",
+      "new_SHA256": "4138faf91c6b76f9b14144b251d64cf64d901ed70cf39982a7eaf3b046af7845",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/repeated_group_validation_v1.json",
+      "destination_relative": "02_code/configs/repeated_group_validation_v1.json",
+      "original_SHA256": "a45269c0d0a576fe5b50b33cadaa77f151b442f070f024be3e1c832f32c63acb",
+      "new_SHA256": "c45fa61db9684a40bd6517bcb15a6308b042920864a95931b3993d0decb98aae",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/selective_depth_processing_v1.json",
+      "destination_relative": "02_code/configs/selective_depth_processing_v1.json",
+      "original_SHA256": "08944dc87ef84ffdad057acb1e832d81881f1ed6fb3e7140a2eecb6abde99cf0",
+      "new_SHA256": "f03fff783ebff51d7b0446c0a276ae3efdfaa90236e78ec28295f09c7e6300a4",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "configs/selective_depth_processing_v2.json",
+      "destination_relative": "02_code/configs/selective_depth_processing_v2.json",
+      "original_SHA256": "7ca3bc4c788546ddf8041486e5920ef69b22e1030c9c01cce996f40be5d3661f",
+      "new_SHA256": "69fcd0dbde2a71a2900b4ff741307250da3c6c950fc5d5a29a2bab7b44269e12",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "data/example_inference_manifest.csv",
+      "destination_relative": "01_data_provenance/data/example_inference_manifest.csv",
+      "original_SHA256": "a7a48d91f4826a0f9c0da9dcfb4d791e9f2b4cd89ad82a257f5a984bc96aff39",
+      "new_SHA256": "e5cd7d9a4896f8e6ff750f454431ef44e5a84e0a2778f4b3ca6165ea677720e1",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "data/processed/prepare_20261023T102714/preprocessed_manifest.csv",
+      "destination_relative": "01_data_provenance/data/processed/prepare_20261023T102714/preprocessed_manifest.csv",
+      "original_SHA256": "f703e425aa8f828e6607a2a9aa2eaec8c7e36104b1b0add430b9bfce692f7588",
+      "new_SHA256": "f3d4a9bbc7dfa854bd69cba9123053acc6c83973073af2cee7a5483e8dfc05c9",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "data/processed/prepare_20261023T102714/preprocessing_v1.json",
+      "destination_relative": "01_data_provenance/data/processed/prepare_20261023T102714/preprocessing_v1.json",
+      "original_SHA256": "f0be7067e84124b14a38f7bcf4e7468affaaea1e616ba333da584b1bbe34079a",
+      "new_SHA256": "5d3b2621ead3e4166b705691b2dff4493eff1cb8686cd45eb502521877a5491b",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "data/processed/prepare_20261023T102714/summary.json",
+      "destination_relative": "01_data_provenance/data/processed/prepare_20261023T102714/summary.json",
+      "original_SHA256": "d991facb98cdc324fd4c0ee69515139e8d22b9f25d564e657df2526bf8cb06f4",
+      "new_SHA256": "dd2202865f7124aab754d06b4db970724e9b1b6cb45920df5febc60415bc4bd7",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "manuscript/research_data.json",
+      "destination_relative": "11_manuscript/manuscript/research_data.json",
+      "original_SHA256": "967235643edcfb40793489ec75d2c4140c9d5830efd2be0ed8452456d15ba02a",
+      "new_SHA256": "2893ce82111857a384a48e3b406540aaefec9a38f0ada92b274721d0a073e9ca",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "models/dinov2/acquisition.json",
+      "destination_relative": "03_models_features/models/dinov2/acquisition.json",
+      "original_SHA256": "81a98626a16e6bbde1eb59888c0ff05aad8999d26d1ce0e0e412f4d2cbe4e5ae",
+      "new_SHA256": "4d3165ded33f389068c92738816fa3e9a81c2cd5e1227b08a43c9c40d1bc2aee",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "models/dinov2/dinov2-7764ea0f912e53c92e82eb78a2a1631e92725fc8/requirements-dev.txt",
+      "destination_relative": "03_models_features/models/dinov2/dinov2-7764ea0f912e53c92e82eb78a2a1631e92725fc8/requirements-dev.txt",
+      "original_SHA256": "fe970368414b041da0776bacee267fd633a30b23d82052f9071c29cf936a041d",
+      "new_SHA256": "b29996c20af2abe6ed1be56cd0809dff5ed38ffddcdd4c29e9c5b2a0d84ad64a",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "models/dinov2/dinov2-7764ea0f912e53c92e82eb78a2a1631e92725fc8/requirements-extras.txt",
+      "destination_relative": "03_models_features/models/dinov2/dinov2-7764ea0f912e53c92e82eb78a2a1631e92725fc8/requirements-extras.txt",
+      "original_SHA256": "1b3750ae8652a54863a2d6d7d0c708f6b7ced787f57c951aa11f1a9444feaacd",
+      "new_SHA256": "8439210106f6ae9b11ded9c16c3e219bc58dac4e3b293f18bf1e7dab92b63927",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "models/dinov2/dinov2-7764ea0f912e53c92e82eb78a2a1631e92725fc8/requirements.txt",
+      "destination_relative": "03_models_features/models/dinov2/dinov2-7764ea0f912e53c92e82eb78a2a1631e92725fc8/requirements.txt",
+      "original_SHA256": "553faa42e1ad3975631e46df26bcfd76ec3add6beacb9ede3f8ef22393f5eefc",
+      "new_SHA256": "d09d8ceebc4d034c7cd6c9c9334d2d5178d2fb1a3b5768ae246398b841e13569",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "provenance/audit_20261023T102309/data_protocol_v1.json",
+      "destination_relative": "12_reproducibility/provenance/audit_20261023T102309/data_protocol_v1.json",
+      "original_SHA256": "e6078d56826130e2f61bb4795a00e62cc7d6ba7792e59eecfab613c56b4c8005",
+      "new_SHA256": "df146119eba2ea41a50d95188abdaa1d2b665fb8c5752f314514cee418265e00",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "provenance/audit_20261023T102309/files_manifest.csv",
+      "destination_relative": "12_reproducibility/provenance/audit_20261023T102309/files_manifest.csv",
+      "original_SHA256": "91b76232801d6f63157e697ce258d8b7cbae156984b00ce19da78023470960e4",
+      "new_SHA256": "8363efb30fe53d5ecb39d82b4363867f7970589e697eee643943d83951b71ced",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "provenance/audit_20261023T102309/pairs_audit.csv",
+      "destination_relative": "12_reproducibility/provenance/audit_20261023T102309/pairs_audit.csv",
+      "original_SHA256": "7132d3f9abeeae20790df001e8a47e566fd00a866fa9cfa32b569cf7959ac3d3",
+      "new_SHA256": "98a6e9504448f055ff8441ab64d37f39b628da37913b44822e018786ad89899b",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "provenance/audit_20261023T102309/source_documents.csv",
+      "destination_relative": "12_reproducibility/provenance/audit_20261023T102309/source_documents.csv",
+      "original_SHA256": "d4612319fe28ddf701bdcf04cde21052f9e0d2135e1b9514f1ce0cf1aa710371",
+      "new_SHA256": "dbe09603a9bf39846bd573d239ff8f02061d3891780fb7a5f268b98a7c238d47",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "provenance/audit_20261023T102309/summary.json",
+      "destination_relative": "12_reproducibility/provenance/audit_20261023T102309/summary.json",
+      "original_SHA256": "36c0b67841e488872df54014310359b24be469e156472674d9b7c83b97823e7a",
+      "new_SHA256": "fca82cefb737317f823a89a8cca926371a844663558f8236fc7b6effb43d08f8",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "provenance/latest_audit.txt",
+      "destination_relative": "12_reproducibility/provenance/latest_audit.txt",
+      "original_SHA256": "b2889ba691a172f8b2414871193c4c8daa2c91ae5cf35ff2e4493ca26cd233b4",
+      "new_SHA256": "93fe4daa62372380b97ab30de474d255b837db559536613ea4439e68a4668058",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "provenance/latest_decision_profile.txt",
+      "destination_relative": "12_reproducibility/provenance/latest_decision_profile.txt",
+      "original_SHA256": "6538c344926955efdef52c01ea9e71a10bfa9e6007927be1f000c9593648df59",
+      "new_SHA256": "cf1491d1db07f247a2bb886d264f4dc21a00c77fe56bdbb2e2bdbe60248d85fc",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "provenance/latest_depth_stress.txt",
+      "destination_relative": "12_reproducibility/provenance/latest_depth_stress.txt",
+      "original_SHA256": "655217a3fd5115c5481ef1c558b3b52064c0c4436ef92373f7b83a40095a0cff",
+      "new_SHA256": "adde9163ae2c840b0f78466b066d9a3c8b4b02ff32f144c4c32435a16a809429",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "provenance/latest_final_metrics.txt",
+      "destination_relative": "12_reproducibility/provenance/latest_final_metrics.txt",
+      "original_SHA256": "01edea406f2fcc0d28f8d43e1a923c6ee2d51e38721cea84672d3623424260f1",
+      "new_SHA256": "6625958d4f864ffb7a712e4a4b657162cf166ac4b0a9d6cd5553fff4420c1925",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "provenance/latest_foundation_experiment.txt",
+      "destination_relative": "12_reproducibility/provenance/latest_foundation_experiment.txt",
+      "original_SHA256": "9aaa900b6bb40843408b3e214b30418bfb1c1c17aa5f4cbe2f19cfdb3aae7973",
+      "new_SHA256": "360471800dd297414e1118231f487ae7f5bc84ed3e916972be3609d6d0e53ec1",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "provenance/latest_matched_controls.txt",
+      "destination_relative": "12_reproducibility/provenance/latest_matched_controls.txt",
+      "original_SHA256": "499c93eae7fefc076572b251a097fd74e819f2956ebe46b5d59f60ff2c51192c",
+      "new_SHA256": "0f0731a5c504fae5287c09fb4613db1749447b3821d4f78a78e92b67cc2341c0",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "provenance/latest_multilevel_depth.txt",
+      "destination_relative": "12_reproducibility/provenance/latest_multilevel_depth.txt",
+      "original_SHA256": "c6dbd916df9992c1bad87bcd9f7367c9bafaee22bdd4f72fef73cf4635b3b925",
+      "new_SHA256": "4d652e219ee17e198392becef0cb3c4f8d10f30a96b1a2ff2b827ca8bdfc03b4",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "provenance/latest_native_score_profile.txt",
+      "destination_relative": "12_reproducibility/provenance/latest_native_score_profile.txt",
+      "original_SHA256": "e03067c5cf63fd560abd0f1db1e740572881cc4f4614058249e66e90e0f26608",
+      "new_SHA256": "6cf970abe0bc294e69b535b73bbdd3ef74c7ca9761dab660461a65df09b95984",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "provenance/latest_prepared.txt",
+      "destination_relative": "12_reproducibility/provenance/latest_prepared.txt",
+      "original_SHA256": "fc369405f6546419b6a27befab15501c8ea9c80d3095ed373d213a1f924a4338",
+      "new_SHA256": "f8069092756d116342af55c5ec0e11273765bcac681f6ec6b19a526c8a22b51e",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "provenance/latest_repeated_validation.txt",
+      "destination_relative": "12_reproducibility/provenance/latest_repeated_validation.txt",
+      "original_SHA256": "e9d1c6478e555d50dd0ce49e609ca56d2f2f08d5d9a39de5350e111259726cba",
+      "new_SHA256": "be714e729f93ba7148c98f4962b741d903922e1214e4061dc30994bc2d337b39",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "provenance/latest_reproduction.txt",
+      "destination_relative": "12_reproducibility/provenance/latest_reproduction.txt",
+      "original_SHA256": "371c1cee4af77475770308a080c2c70b3097bfdf86054be1667d9ee8b2415bb6",
+      "new_SHA256": "51792d5b196b0320ec1f876260cb59681cb951c5fef40050754c21e2e994fce7",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "provenance/release_assembly.json",
+      "destination_relative": "12_reproducibility/provenance/release_assembly.json",
+      "original_SHA256": "5fc524ea4b837d30e720aedb3055bcacc390ed44ded74f51507991ce3c9ad776",
+      "new_SHA256": "57fc97edfbede7cd9842479aaf4d697156feeec6ff21da4627243dcd096f346b",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "reports/exploration_trained_model_audit.csv",
+      "destination_relative": "12_reproducibility/reports/exploration_trained_model_audit.csv",
+      "original_SHA256": "8122822519839ffb5495685d44bc277b02e8d6a4a8b27f0fc5900efe06dfc06e",
+      "new_SHA256": "8b4139054d71fe16ea67a27e0d51605d981fb4b3de5cef1dd8eaef7e603b09de",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "reports/innovation_decision.json",
+      "destination_relative": "12_reproducibility/reports/innovation_decision.json",
+      "original_SHA256": "664b7fa56ee561eb4a7836df0fc1ed95044ab4ec5b34e1b271bf7861ff0e5442",
+      "new_SHA256": "492fc8d57f1af3ed314dc0ffa75975f82b69061d0e46de3100e4a7ab97c26ce0",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "reports/reproduction_20261023T161153/verification.json",
+      "destination_relative": "12_reproducibility/reports/reproduction_20261023T161153/verification.json",
+      "original_SHA256": "0ce212a91467b93c8db379f7c44280e0fc33d07a20d573092b3c08a1bd965ed9",
+      "new_SHA256": "259bfacc01629f12ee8661e32d7738cb355cc60c21576bb914d6ebc860feb1fc",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "reports/word_export_verification.json",
+      "destination_relative": "12_reproducibility/reports/word_export_verification.json",
+      "original_SHA256": "f23e9e737985fa758f90d37d19707ddd601eb0b376e324f898e4239701b8f0fe",
+      "new_SHA256": "c4840b2d0e0be8cb8f36de1665e791a6ad90eb998d53350162c8a88c353373f5",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "runs/depth_stress_20261023T155248/corruption_audit.csv",
+      "destination_relative": "08_depth_stress/runs/depth_stress_20261023T155248/corruption_audit.csv",
+      "original_SHA256": "f0f588de85ca047aecc85221ca98565c6640b99cfb0b8764009b6ba8c9feaa92",
+      "new_SHA256": "d7ba5897520a29d6869b0651962a35acba66b0d75a0fcdf4f0fc7bfed4b3cdb5",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "runs/foundation_20261023T115636/COMPLETE.json",
+      "destination_relative": "03_models_features/feature_runs/foundation_20261023T115636/COMPLETE.json",
+      "original_SHA256": "5e15e9bc0530e6dd92c084f984b8b29af61a7a2dfe426772e32cfa8f6d87811f",
+      "new_SHA256": "a9905cc9cfc52edf8a46b42ce3060a5fbecf6c6160f1c7fcd31057a530653aa0",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "runs/foundation_20261023T115636/source_Depth_tokens/input_manifest.csv",
+      "destination_relative": "03_models_features/feature_runs/foundation_20261023T115636/source_Depth_tokens/input_manifest.csv",
+      "original_SHA256": "42c5d6f42233f5b0f185eb84afc52053bd51196a5236358842bd4a78e74f9f6d",
+      "new_SHA256": "6902a5d18beaf5169df1e1c4005cda58e625f223bd777d03f944bdbc2c3f4fe4",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "runs/foundation_20261023T115636/source_RGB_tokens/input_manifest.csv",
+      "destination_relative": "03_models_features/feature_runs/foundation_20261023T115636/source_RGB_tokens/input_manifest.csv",
+      "original_SHA256": "febe03d35d9a236ad81f8a8b798dbcd15df368fc9d34d6cf643ce261cbdb0a7f",
+      "new_SHA256": "a3984ffaa5f6bad2fb590bbd4e10935ffbce58930bf1a83f5bc50becf633cce7",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "runs/foundation_refresh_20261023T161215/COMPLETE.json",
+      "destination_relative": "03_models_features/feature_runs/foundation_refresh_20261023T161215/COMPLETE.json",
+      "original_SHA256": "8246b05cb7ba23e47e7e0ce114b3233cf88181bd86582768246ed6b94894f2da",
+      "new_SHA256": "82247536771c8b1a640c236d047167f4000e62b94b6e5cadb914d6047cba9484",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "runs/foundation_refresh_20261023T161215/source_Depth_tokens/input_manifest.csv",
+      "destination_relative": "03_models_features/feature_runs/foundation_refresh_20261023T161215/source_Depth_tokens/input_manifest.csv",
+      "original_SHA256": "42c5d6f42233f5b0f185eb84afc52053bd51196a5236358842bd4a78e74f9f6d",
+      "new_SHA256": "6902a5d18beaf5169df1e1c4005cda58e625f223bd777d03f944bdbc2c3f4fe4",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "runs/foundation_refresh_20261023T161215/source_RGB_tokens/input_manifest.csv",
+      "destination_relative": "03_models_features/feature_runs/foundation_refresh_20261023T161215/source_RGB_tokens/input_manifest.csv",
+      "original_SHA256": "febe03d35d9a236ad81f8a8b798dbcd15df368fc9d34d6cf643ce261cbdb0a7f",
+      "new_SHA256": "a3984ffaa5f6bad2fb590bbd4e10935ffbce58930bf1a83f5bc50becf633cce7",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "runs/multilevel_inputs_20261023T161332/COMPLETE.json",
+      "destination_relative": "03_models_features/feature_runs/multilevel_inputs_20261023T161332/COMPLETE.json",
+      "original_SHA256": "8246b05cb7ba23e47e7e0ce114b3233cf88181bd86582768246ed6b94894f2da",
+      "new_SHA256": "82247536771c8b1a640c236d047167f4000e62b94b6e5cadb914d6047cba9484",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    },
+    {
+      "source_relative": "runs/native_profile_20261023T155707/input_manifest.csv",
+      "destination_relative": "09_native_benchmark/runs/native_profile_20261023T155707/input_manifest.csv",
+      "original_SHA256": "a7a48d91f4826a0f9c0da9dcfb4d791e9f2b4cd89ad82a257f5a984bc96aff39",
+      "new_SHA256": "e5cd7d9a4896f8e6ff750f454431ef44e5a84e0a2778f4b3ca6165ea677720e1",
+      "change": "Path metadata normalisation; numeric outcomes retained"
+    }
+  ]
+}

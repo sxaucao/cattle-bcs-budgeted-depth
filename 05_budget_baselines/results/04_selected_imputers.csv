@@ -1,0 +1,10 @@
+﻿repeat,fold,method,scale,alpha,validation_MAE
+0,0,Imputed_mean_shift,2.0,100.0,0.6267055899085455
+0,1,Imputed_mean_shift,1.0,0.1,0.43964476776547395
+0,2,Imputed_mean_shift,2.0,0.01,0.563724204493225
+1,0,Imputed_mean_shift,0.5,0.1,0.48353273445009043
+1,1,Imputed_mean_shift,1.0,0.1,0.6408991510786696
+1,2,Imputed_mean_shift,1.0,100.0,0.5295079076701731
+2,0,Imputed_mean_shift,2.0,1.0,0.45306087628203734
+2,1,Imputed_mean_shift,1.0,100.0,0.7178446765377625
+2,2,Imputed_mean_shift,1.0,0.1,0.5742160131862438

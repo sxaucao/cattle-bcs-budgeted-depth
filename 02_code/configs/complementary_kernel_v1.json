@@ -1,0 +1,34 @@
+{
+  "version": "exploratory-label-free-complementary-kernel-v1",
+  "exploratory": true,
+  "rationale": "Marginal label alignment discards a modality even when joint descriptors help. Instead retain complementary feature components by kernel ridge residualisation, without aligning modality weights to labels.",
+  "source": "Fixed DINOv2 global RGB/depth descriptors and existing animal-group splits",
+  "projection": "For target-feature kernel K_R and predictor kernel K_D, A=(K_D+eta I)^-1. The residual feature at x is phi_R(x)-k_D(x,X) A Phi_R(X). The residual kernel is the corresponding inner product, so it is PSD; all projection anchors are training episodes only.",
+  "normalisation": "Normalise residual kernel entries by square root of corresponding residual self-kernel diagonals, with lower bound 1e-12",
+  "arms": [
+    "Depth_plus_RGB_complement",
+    "RGB_plus_Depth_complement",
+    "Symmetric_complement_kernel",
+    "Mismatched_Depth_plus_RGB_complement"
+  ],
+  "fusion": "Equal convex sum of base and residual kernels, or two residual kernels; no label-based removal of a modality",
+  "eta_grid": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "kernel_scale_grid": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "alpha_grid": [
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "SVR": "C=1/alpha, epsilon=.1; inner-validation MAE chooses settings; source test outcomes from earlier development are known, so later comparisons remain exploratory",
+  "mismatch": "Permute depth training anchors relative to RGB targets only for the cross-modal projection. Keep the base depth kernel and true BCS regression labels unchanged. Save mapping.",
+  "claims": "Shared features are statistically predictable features, not verified background or nuisance variables. Residualisation does not identify anatomy or causal factors. Kernel ridge residualisation is an existing construction; this is an application-specific fusion candidate."
+}

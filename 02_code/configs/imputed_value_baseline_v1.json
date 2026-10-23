@@ -1,0 +1,19 @@
+{
+  "exploratory": true,
+  "purpose": "Closer literature-inspired baseline: estimate unseen depth features from RGB, then prioritise expected prediction change. Not an exact reproduction of CAMA, whose main task and metrics are binary classification.",
+  "imputer": "RGB RBF-kernel ridge to frozen depth descriptors, alpha .01/.1/1/10/100 and bandwidth .5/1/2; normalise imputed descriptors before joint prediction",
+  "scores": [
+    "conditional_mean_score_shift",
+    "residual_sampled_score_shift"
+  ],
+  "residuals": "For each training animal, predict depth from other training animals with the same selected parameter identity. Use all training residual vectors equally as additive conditional draws; normalise each draw. No test depth used for acquisition scores.",
+  "selection": "Inner-validation mean routed MAE at depth frame caps .25/.5/.75, same outer animal splits and exact 0-1 knapsack as existing binary gate",
+  "budget_caps": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "scope": "A small-data conditional-imputation comparator, not a claim of replicating published deep generative acquisition systems."
+}

@@ -1,0 +1,17 @@
+{
+  "version": "exploratory-bidirectional-cross-animal-residual-fusion-v1",
+  "exploratory": true,
+  "rationale": "Cross-fitted RGB correction improves a depth base but does not surpass direct joint descriptors. Evaluate the symmetric direction and a fixed bidirectional average before attributing the effect to a particular base modality.",
+  "parent": "crossfit_residual_v1, all forward outcomes retained",
+  "reverse_base": "Validation-selected frozen DINOv2 RGB global SVR; train-only leave-one-animal-out residuals",
+  "reverse_corrections": [
+    "Depth",
+    "RGB self",
+    "shuffled Depth residual target"
+  ],
+  "correction_grid": "Same bandwidth multipliers [.5,1,2], alpha [.01,.1,1,10], lambda [0,.25,.5,.75,1] as the forward experiment",
+  "bidirectional_equal": "Mean of the selected forward and reverse predictions, no additional parameter",
+  "bidirectional_validation": "Forward/reverse convex mixture weight chosen from [0,.25,.5,.75,1] by inner-validation MAE",
+  "missing_modality": "Separate availability conditions use the already trained single-modality base when only one modality is available; these are synthetic availability tests, not estimated on-farm failure rates",
+  "scope": "An exploratory application-specific architecture built on existing cross-validation stacking and kernel regression. Report all controls and any null result."
+}

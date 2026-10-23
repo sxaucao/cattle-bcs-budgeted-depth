@@ -1,0 +1,57 @@
+{
+  "completed_utc": "2026-10-23T10:50:59.186585+00:00",
+  "full_replay": true,
+  "all_passed": true,
+  "checks": [
+    {
+      "check": "All native file sizes and SHA256",
+      "passed": true,
+      "files": 7630,
+      "bytes": 2928879671
+    },
+    {
+      "check": "All selected native paths are internal and present",
+      "passed": true,
+      "RGB_frames": 1245,
+      "Depth_frames": 1245
+    },
+    {
+      "check": "02_extract_frozen_features.py",
+      "passed": true,
+      "seconds": 104.8349272000014
+    },
+    {
+      "check": "03_grouped_validation.py",
+      "passed": true,
+      "seconds": 27.704014099999767
+    },
+    {
+      "check": "04_matched_budget_baselines.py",
+      "passed": true,
+      "seconds": 27.581266499997582
+    },
+    {
+      "check": "05_score_profile_ablation.py",
+      "passed": true,
+      "seconds": 7.578572099999292
+    },
+    {
+      "check": "06_compute_metrics.py",
+      "passed": true,
+      "seconds": 6.359546100000443
+    },
+    {
+      "check": "Replay final MAE versus original for all120 method-cap cells",
+      "passed": true,
+      "max_MAE_difference": 0.0,
+      "cells": 120
+    },
+    {
+      "check": "Native release inference matches replayed held-out predictions and costs",
+      "passed": true,
+      "events": 51,
+      "max_prediction_difference": 0.0008935764626176734
+    }
+  ],
+  "python": "python.exe"
+}

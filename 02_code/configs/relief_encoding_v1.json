@@ -1,0 +1,26 @@
+{
+  "version": "exploratory-native-depth-relative-relief-v1",
+  "exploratory": true,
+  "prior_test_results_observed": true,
+  "hypothesis": "Global full-frame resizing devotes few pixels to the dorsal surface, while global depth range includes pen background. A central native-image crop and a row-relative depth channel may preserve relevant local relief without requiring RGB-depth pixel registration.",
+  "sampling": "Same deterministic maximum 12 decoded-RGB representatives per episode as all earlier evaluation; no frame rejected by quality or model output",
+  "crop": "Central 50 percent of native width and central 90 percent of native height, defined before model outcomes; RGB and depth crops computed independently",
+  "depth_global": "1st/99th percentile of valid positive pixels, clipped to [0,1], invalid=0",
+  "relative_relief": "Subtract each row's valid median, divide by frame-wide 90th minus 10th valid percentile of residuals, clip signed residual to [-1,1], encode as [0,1] with invalid=0. Third channel is the validity mask. No physical depth units or calibrated anatomy are claimed.",
+  "features": "Fully frozen ImageNet ResNet18, 512-dimensional mean pool, L2 normalized episode mean",
+  "controls": [
+    "RGB central crop",
+    "depth central crop with repeated global-normalised channel",
+    "depth central crop with global depth, relative relief, validity channels",
+    "depth central crop validity-mask only",
+    "depth full-image validity-mask only"
+  ],
+  "regressor": "RBF SVR; same fixed 3x4 inner-validation bandwidth and C grid as full-image frozen references; alpha in [0.01,0.1,1,10], C=1/alpha; bandwidth multiplier in [0.5,1,2]; epsilon=0.1; training pairwise median squared distance sets bandwidth",
+  "outer_folds": [
+    0,
+    1,
+    2
+  ],
+  "secondary_probe": "Ridge on acquisition metadata only, train-only standardisation; no biological interpretation of metadata prediction",
+  "scope": "New preprocessing candidate tested against frozen, capacity-matched controls; no segmentation ground truth, no claim of universal anatomical localisation, no confirmatory external depth cohort"
+}

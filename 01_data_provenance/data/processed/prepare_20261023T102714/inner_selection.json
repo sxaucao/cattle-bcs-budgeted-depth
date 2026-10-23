@@ -1,0 +1,65 @@
+[
+  {
+    "outer_test_fold": 0,
+    "seed": 20261023,
+    "validation_groups": [
+      "Cow_29",
+      "Cow_3",
+      "Cow_30",
+      "Cow_33",
+      "Cow_4",
+      "Cow_5",
+      "Cow_50",
+      "Cow_54"
+    ],
+    "selection_score": [
+      0,
+      0,
+      0.03334693877551021
+    ],
+    "group_count": 8,
+    "uses_test_model_results": false
+  },
+  {
+    "outer_test_fold": 1,
+    "seed": 20261024,
+    "validation_groups": [
+      "Cow_19",
+      "Cow_21",
+      "Cow_22",
+      "Cow_32",
+      "Cow_44",
+      "Cow_49",
+      "Cow_53",
+      "Cow_7"
+    ],
+    "selection_score": [
+      0,
+      0,
+      0.014043276425786644
+    ],
+    "group_count": 8,
+    "uses_test_model_results": false
+  },
+  {
+    "outer_test_fold": 2,
+    "seed": 20261025,
+    "validation_groups": [
+      "Cow_13",
+      "Cow_19",
+      "Cow_21",
+      "Cow_26",
+      "Cow_31",
+      "Cow_46",
+      "Cow_52",
+      "Cow_54"
+    ],
+    "selection_score": [
+      0,
+      0,
+      0.0034555579584775085
+    ],
+    "group_count": 8,
+    "uses_test_model_results": false
+  }
+]

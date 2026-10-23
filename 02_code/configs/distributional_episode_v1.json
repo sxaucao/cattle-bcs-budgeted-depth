@@ -1,0 +1,59 @@
+{
+  "version": "exploratory-distributional-episode-v1",
+  "exploratory": true,
+  "prior_source_test_observed": true,
+  "rationale": "Averages discard within-episode feature variation; a distributional episode representation can retain heterogeneous dorsal observations without requiring a teacher or deleting events.",
+  "encoder": "Same fully frozen ImageNet ResNet18 for original letterboxed RGB/depth; per-frame L2 normalisation",
+  "bag": "Same deterministic maximum 12 unique decoded RGB representatives per episode, no padding, no quality filtering",
+  "projection_seed": 517,
+  "directions": 64,
+  "quantile_levels": [
+    0.03125,
+    0.09375,
+    0.15625,
+    0.21875,
+    0.28125,
+    0.34375,
+    0.40625,
+    0.46875,
+    0.53125,
+    0.59375,
+    0.65625,
+    0.71875,
+    0.78125,
+    0.84375,
+    0.90625,
+    0.96875
+  ],
+  "representation": "Project each normalised frame embedding on fixed random unit directions; interpolate the empirical quantile function at 16 fixed midpoints; flatten and divide by sqrt(64*16). This finite feature map is an approximation, not the exact sliced Wasserstein distance.",
+  "arms": [
+    "RGB_frame_mean_SVR",
+    "Depth_frame_mean_SVR",
+    "RGBD_frame_mean_SVR",
+    "RGB_distribution_SVR",
+    "Depth_distribution_SVR",
+    "RGBD_marginal_distribution_SVR",
+    "RGBD_joint_distribution_SVR",
+    "RGBD_joint_shuffled_distribution_SVR"
+  ],
+  "joint": "Concatenate normalised RGB and depth frame features with sqrt(0.5) scaling, then project in 1024 dimensions; filename pairing is not claimed as independently verified sensor synchronisation",
+  "shuffled_control": "Fixed different permutation of depth frames inside each episode, preserves each modality marginal and episode label; no cross-animal transfer, all mappings logged",
+  "kernel_scale_grid": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "alpha_grid": [
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "SVR": "C=1/alpha, epsilon=0.1; RBF bandwidth is training pairwise median squared distance times scale; validation MAE selects a single grid point",
+  "outer_folds": [
+    0,
+    1,
+    2
+  ],
+  "novelty": "An event-level application and controlled pairing/heterogeneity evaluation; distribution regression and sliced Wasserstein kernels are established approaches, not invented here"
+}

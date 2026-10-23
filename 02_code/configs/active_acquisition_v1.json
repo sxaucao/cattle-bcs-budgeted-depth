@@ -1,0 +1,50 @@
+{
+  "version": "exploratory-privileged-depth-animal-batch-acquisition-v1",
+  "exploratory": true,
+  "new_research_question": "Can depth available only in an archived training pool help select which animal groups to annotate, reducing annotation cost for a final RGB-only BCS predictor? This tests annotation efficiency, not a claim to improve full-data RGB accuracy.",
+  "motivation": "Direct distillation and feature-transfer candidates did not show reliable gains. Change the role of depth from teacher targets to training-pool acquisition information, and account explicitly for repeated observations and label cost.",
+  "outer_folds": [
+    0,
+    1,
+    2
+  ],
+  "seeds": [
+    3101,
+    3102,
+    3103,
+    3104,
+    3105,
+    3106,
+    3107,
+    3108,
+    3109,
+    3110
+  ],
+  "budgets": [
+    0.25,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "budget_unit": "Number of training episode labels; querying an animal group reveals all of its archived episode labels and costs that group's episode count. No acquisition may exceed the nominal episode-label budget. Validation labels are fixed and included in every reported total annotation cost.",
+  "initialisation": "Same random animal-group order for every policy within a fold/seed, acquire three groups that fit within the first budget; no class-based initialisation or unqueried BCS balancing",
+  "policies": [
+    "Random_groups",
+    "RGB_core_set",
+    "RGBD_core_set",
+    "RGB_committee_diversity",
+    "Privileged_disagreement_diversity",
+    "Shuffled_depth_disagreement_diversity"
+  ],
+  "features": "Unchanged frozen DINOv2 global descriptors, no BCS fine tuning; RGB-only final predictor. The unlabeled training pool is available for feature distances; test/validation images do not define pool bandwidths or acquisition scores.",
+  "regressor": "RBF SVR; gamma bandwidth uses full unlabeled training-pool median squared distance times [.5,1,2]; C=1/alpha with alpha [.01,.1,1,10], epsilon=.1. Retune with currently acquired labels plus fixed validation labels at each round, never with unqueried labels.",
+  "acquisition": "For each eligible unlabelled group, average absolute RGB/depth prediction disagreement over its episodes. Multiply (0.25+0.75 percentile rank of disagreement) by (0.25+0.75 percentile rank of minimum joint-feature distance to acquired episodes), divided by square root of group label cost. Disagreement is refreshed once per batch; diversity is updated after each group in that batch.",
+  "committee_control": "Ten group-bootstrap RGB SVRs at the selected RGB hyperparameters; prediction standard deviation replaces cross-modal disagreement, otherwise identical diversity/cost rule",
+  "core_set": "Farthest group, using minimum episode distance to any acquired episode; divide by sqrt(group episode cost); RGB and RGBD representations tested separately",
+  "shuffled_control": "Reassign the unlabeled depth predictions within the training pool by fixed random permutation before constructing disagreement; keep regression and queried true labels unchanged",
+  "primary_endpoint": "Area under native-score MAE versus total annotation-cost fraction over [0.5,1.0], divided by 0.5; include the full fixed validation-label cost. Interpolate between actually achieved budget points, do not force curves to be monotonic.",
+  "secondary": "MAE, animal-mean MAE, per-grade errors, actual episode labels, acquired animal groups, and grade representation at each budget; all six policies and ten seeds retained",
+  "test_evaluation": "Freeze every acquisition trajectory and prediction before computing or printing test errors",
+  "scope": "Retrospective simulation on previously scored archive; group metadata assumed available; counts of episode labels are a reproducible cost proxy, not measured veterinary minutes. Active privileged learning already exists; no first-general-method claim."
+}

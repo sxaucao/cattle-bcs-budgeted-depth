@@ -1,0 +1,15 @@
+{
+  "completed_utc": "2026-10-23T10:50:58.162051+00:00",
+  "benchmark": false,
+  "GPU": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+  "native_files_reloaded": true,
+  "feature_cache_in_timed_path": false,
+  "indexing_and_model_loading_excluded": true,
+  "file_cache": "warm OS cache",
+  "events": 51,
+  "all_predictions_from_native_input": true,
+  "max_archive_prediction_difference": null,
+  "archive_action_parity": true,
+  "models": "Exploratory repeat0 fold0 fitted scorers; no claim of prospective calibration",
+  "script_sha256": "5b52fae9fb56e85cd0b73a835cee0f04810d9a0da326b847c8a4d71fb1abaa0e"
+}

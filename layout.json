@@ -1,0 +1,23 @@
+{
+  "data": "01_data_provenance/data",
+  "configs": "02_code/configs",
+  "scripts": "02_code",
+  "models": "03_models_features/models",
+  "runs": "03_models_features/feature_runs",
+  "repeated_runs": "04_grouped_validation/runs",
+  "matched_runs": "05_budget_baselines/runs",
+  "decision_runs": "06_ablation/runs",
+  "analysis": "07_statistics/analysis",
+  "tables": "07_statistics/tables",
+  "stress_runs": "08_depth_stress/runs",
+  "native_runs": "09_native_benchmark/runs",
+  "figures": "10_figures/figures",
+  "manuscript": "11_manuscript/manuscript",
+  "submission": "11_manuscript/submission",
+  "references": "11_manuscript/references",
+  "journal_requirements": "11_manuscript/journal_requirements",
+  "provenance": "12_reproducibility/provenance",
+  "reports": "12_reproducibility/reports",
+  "tmp": "12_reproducibility/tmp",
+  "plot_data": "07_statistics/plot_data"
+}

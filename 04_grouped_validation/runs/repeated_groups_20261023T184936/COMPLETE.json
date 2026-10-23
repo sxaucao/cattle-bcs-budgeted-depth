@@ -1,0 +1,12 @@
+{
+  "completed_utc": "2026-10-23T10:49:57.369150+00:00",
+  "repeats": 3,
+  "outer_fits": 9,
+  "source_events_per_repeat": 151,
+  "animals_per_repeat": 52,
+  "models_group_disjoint": true,
+  "strict_teacher_HPO_excludes_target_animal": true,
+  "all_methods_retained": true,
+  "exploratory_same_source_not_external": true,
+  "script_sha256": "340e6ddb64f8631c9ccbb62f73828a23403129de6a823c09d34a1e30fafae5e4"
+}

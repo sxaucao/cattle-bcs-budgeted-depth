@@ -1,0 +1,48 @@
+{
+  "version": "exploratory-animal-mass-facility-annotation-v1",
+  "exploratory": true,
+  "research_question": "Can annotation selection account jointly for repeated episodes from an animal and the unequal number of episode/photo labels acquired with each animal group?",
+  "motivation": "Privileged cross-modal disagreement was weaker than RGB diversity at low budgets. Replace uncertain teacher predictions by an explicit label-free coverage objective, with each animal contributing equal total mass.",
+  "cohorts": [
+    "beef",
+    "dairy"
+  ],
+  "seeds": [
+    3101,
+    3102,
+    3103,
+    3104,
+    3105,
+    3106,
+    3107,
+    3108,
+    3109,
+    3110
+  ],
+  "budgets": [
+    0.25,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "objective": "F(S)=sum_g (1/|E_g|) sum_{i in E_g} max_{j in union_{h in S} E_h} exp(-||z_i-z_j||^2/tau); total selected-group cost sum_h |E_h| cannot exceed the nominal training-label budget. tau is the full unlabeled training-pool median squared RGB distance.",
+  "greedy": "At each query, choose the affordable group with greatest marginal F gain divided by its number of episode/photo labels; update coverage after every group. Use no unqueried labels or predicted BCS in acquisition.",
+  "policies": [
+    "Random_groups",
+    "RGB_core_set",
+    "RGB_committee_diversity",
+    "RGB_facility_uniform",
+    "RGB_facility_animal_mass",
+    "RGB_facility_animal_mass_no_cost",
+    "RGBD_facility_animal_mass"
+  ],
+  "dairy": "No depth data exist, so the RGBD acquisition arm is omitted. Images use their own native 1-5 scale and mean of two raters. This is an independent data-source replication with separate supervised fitting, not a zero-shot cross-scale transfer.",
+  "initialisation": "Identical random group order across policies within cohort/fold/seed; acquire up to three groups affordable within first budget, without accessing labels; record actual count and cost",
+  "predictor": "Fixed DINOv2 RGB global features, RBF SVR epsilon=.1, C grid [100,10,1,.1], training-pool median-distance bandwidth multipliers [.5,1,2]; choose settings using acquired labels and fixed validation labels only",
+  "cost": "All fixed validation reference labels are included in total annotation cost. Beef costs are scoring-episode references; dairy costs are photo-reference pairs averaged across raters. These counts are proxies, not observed annotation minutes, and absolute costs are not compared across cohorts.",
+  "primary_endpoint": "Mean MAE integrated over actually achieved total annotation-cost fractions [0.5,1.0], divided by .5; interpolate each fold/seed curve without imposing monotonic accuracy",
+  "controls": "Uniform episode mass versus equal animal mass; marginal-gain-only versus gain-per-label-cost; standard cost-adjusted RGB core set; RGB bootstrap committee plus diversity; random animal groups. All share initial labels and validation/test animal groups.",
+  "uncertainty": "Paired animal-group bootstrap of seed-averaged integrated out-of-fold event errors; seeds are acquisition repetitions, not independent animals",
+  "novelty_scope": "Facility location, submodular selection and active learning are established. The candidate is an explicit repeated-animal and unequal-label-cost adaptation for BCS, tested rather than assumed effective. No prospective annotation-time saving or full-score equivalence claim is prespecified."
+}

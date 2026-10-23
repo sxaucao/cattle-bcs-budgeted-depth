@@ -1,0 +1,39 @@
+{
+  "audit_id": "20261023T102309",
+  "started_utc": "2026-10-23T02:23:09.235439+00:00",
+  "finished_utc": "2026-10-23T02:24:03.188863+00:00",
+  "source_dataset": "01_data_provenance/data/raw_snapshot/dataset",
+  "snapshot_dataset": "01_data_provenance/data/raw_snapshot/dataset",
+  "source_bytes": 2928879671,
+  "source_files": 7630,
+  "verified_files": 7630,
+  "paired_frames": 3815,
+  "eligible_pairs": 2802,
+  "episodes": 151,
+  "animal_groups": 52,
+  "issues": 1013,
+  "duplicate_rgb_rows": 1250,
+  "training_gate": "STOP_REVIEW_ISSUES",
+  "rgb_shapes": {
+    "480x640x3": 3815
+  },
+  "depth_dtypes": {
+    "uint16": 3815
+  },
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "packages": {
+    "numpy": "2.0.0",
+    "Pillow": "11.3.0"
+  },
+  "script_sha256": "b6bebcdd856b640e2e87a1ec9a92d42e0f43ed85e85be1d68d36a62716583b29",
+  "config_sha256": "e6078d56826130e2f61bb4795a00e62cc7d6ba7792e59eecfab613c56b4c8005",
+  "historical_evidence": {
+    "extracted_rgb_depth_pairs": 5940,
+    "removed_pairs": 2125,
+    "retained_pairs": 3815,
+    "evidence": "Previous Animals article, section 2.1.1 and Table 1; aggregate counts only. Not reconstructed from raw ROS bags."
+  },
+  "historical_exclusion_manifest": "not located in the supplied legacy project; no reconstructed exclusion reasons assigned",
+  "scope": "Exact-content/structural audit; not manual anatomical quality adjudication or near-duplicate/physical-identity verification."
+}

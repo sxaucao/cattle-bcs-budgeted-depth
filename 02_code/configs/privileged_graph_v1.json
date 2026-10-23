@@ -1,0 +1,50 @@
+{
+  "version": "exploratory-cross-animal-ordinal-residual-graph-v1",
+  "exploratory": true,
+  "prior_source_test_results_observed": true,
+  "rationale": "Replace imitation of a small-sample teacher with training-only depth neighbourhood constraints; preserve ordinal score differences by regularising residual differences instead of smoothing scores toward equality.",
+  "encoder": "Fully frozen ImageNet ResNet18, independent RGB and normalised-depth encodings, episode means, L2 normalisation",
+  "outer_folds": [
+    0,
+    1,
+    2
+  ],
+  "alpha_grid": [
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "kernel_scale_grid": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "graph_weight_grid": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "neighbours": 5,
+  "ordinal_band": 1.0,
+  "graph": "Training nodes only; no edges within the same animal group; up to five nearest different-group nodes with absolute BCS difference <=1; Gaussian distance weights; symmetrise with maximum; unnormalised Laplacian rescaled to trace=n.",
+  "training_risk": "Episode weights inversely proportional to training episode count per animal group, rescaled to mean one; unweighted KRR and SVR also reported",
+  "objective": "(K a - yc)^T S (K a-yc) + alpha a^T K a + gamma (K a-yc)^T L_depth (K a-yc); yc centered by the group-balanced training mean",
+  "controls": [
+    "RGB KRR",
+    "group-balanced RGB KRR",
+    "RGB SVR",
+    "depth KRR",
+    "depth SVR",
+    "RGBD KRR",
+    "RGBD SVR",
+    "label-only residual graph",
+    "RGB residual graph",
+    "depth score-smoothing graph",
+    "depth residual graph",
+    "mismatched-depth residual graph"
+  ],
+  "selection": "Lowest inner-validation MAE, fixed grid ordering breaks exact ties; outer test used only after each arm is selected",
+  "mismatch": "Reassign training depth features from a different animal within native-depth-width-majority strata with replacement, deterministic seed; preserve ordinal label gate and save all mappings",
+  "scope": "An application-specific candidate built on established manifold and privileged-information learning, not a claim to invent graph regularisation. Subsequent results remain exploratory."
+}

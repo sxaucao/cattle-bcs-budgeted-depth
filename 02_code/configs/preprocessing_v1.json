@@ -1,0 +1,29 @@
+{
+  "version": "preprocessing-v1-after-structural-audit-before-training",
+  "structural_resolution": "Different native sizes are not corruption. Retain readable same-episode filename pairs for episode-level independent modality encoders; no pixel-wise registration or timestamp synchrony is asserted.",
+  "unresolved_reason_policy": "Only rgb_depth_spatial_shape_mismatch may be resolved by independent geometry-preserving letterbox preprocessing. All other integrity issues stop execution.",
+  "primary_pool": "Within each episode, consolidate identical decoded RGB arrays into one visual observation. Choose the pair with the smallest numeric frame index as the deterministic representative; retain the other depth arrays in the immutable source snapshot and map them to the representative.",
+  "duplicate_sensitivity": "The full 3815 filename-paired inventory remains available as a prespecified sampling sensitivity analysis, not an additional independent cohort.",
+  "target_size": [
+    160,
+    160
+  ],
+  "rgb_resize": "Aspect-ratio-preserving bilinear resize, centered zero padding to 160x160",
+  "depth_resize": "Aspect-ratio-preserving nearest-neighbour resize, centered zero padding to 160x160; independent of RGB native size",
+  "depth_scale": "Per-frame finite positive values: percentiles 1 and 99, clip to percentile interval, scale to [0,1], invalid pixels zero",
+  "pixel_alignment_required": false,
+  "original_timestamp_alignment_verified": false,
+  "depth_physical_units_verified": false,
+  "episode_frames": 12,
+  "evaluation_sampling": "Equally spaced representative indices; if fewer than 12, use each once then pad with the last representative. Save valid-token mask and original unique count. Padding is not a new observation.",
+  "outer_split": "Legacy animal-group three-fold membership, independently checked against every pair",
+  "inner_validation": {
+    "seed": 20261023,
+    "fraction_groups": 0.22,
+    "candidate_count": 2000,
+    "selection": "Use non-test animals only. Lexicographically minimise missing training classes, missing validation classes, then squared deviation of validation per-class episode fraction from target. Candidate ties retain first generated candidate. No images or model outcomes used."
+  },
+  "training_augmentation": "Not yet configured; no augmentation applied to this cache",
+  "quality_gating": "none",
+  "reference_scale": "Integer BCS 2-6 from original 1-9 scale; class index BCS-2, no relabelling"
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "file": "class_counts.csv",
+    "sha256": "b7d82f1ccfd8eab57a6b6e741aa8cdac6ca3a57d502fea9835cbc10e0f70d8a1",
+    "bytes": 137
+  },
+  {
+    "file": "data_protocol_v1.json",
+    "sha256": "e6078d56826130e2f61bb4795a00e62cc7d6ba7792e59eecfab613c56b4c8005",
+    "bytes": 2750
+  },
+  {
+    "file": "episodes_audit.csv",
+    "sha256": "5cf07a6407cade3f278899325071aa1e7d1f3f96f12c1eab7990632da79237e5",
+    "bytes": 6882
+  },
+  {
+    "file": "exact_rgb_duplicates.csv",
+    "sha256": "d82deecf58e697e3630eb02c06070c3f3ea45e72b3798ccbdf7de2886342e67b",
+    "bytes": 140606
+  },
+  {
+    "file": "files_manifest.csv",
+    "sha256": "91b76232801d6f63157e697ce258d8b7cbae156984b00ce19da78023470960e4",
+    "bytes": 2175314
+  },
+  {
+    "file": "issues.csv",
+    "sha256": "496474dbf3485fff130353e8205ac065313eb71b665ceb6fce8234570da1e9ee",
+    "bytes": 69554
+  },
+  {
+    "file": "pairs_audit.csv",
+    "sha256": "7132d3f9abeeae20790df001e8a47e566fd00a866fa9cfa32b569cf7959ac3d3",
+    "bytes": 1898793
+  },
+  {
+    "file": "source_documents.csv",
+    "sha256": "d4612319fe28ddf701bdcf04cde21052f9e0d2135e1b9514f1ce0cf1aa710371",
+    "bytes": 2441
+  },
+  {
+    "file": "stage_ledger.csv",
+    "sha256": "516301ce1e7ac6a219786fb9a6e82b2eea57ed35e7689199f6b95aa263940103",
+    "bytes": 880
+  },
+  {
+    "file": "summary.json",
+    "sha256": "36c0b67841e488872df54014310359b24be469e156472674d9b7c83b97823e7a",
+    "bytes": 1645
+  }
+]

@@ -1,0 +1,2 @@
+﻿policy,budget_cap,events,RGB_frames,depth_frames,probe_frames,additional_depth_frames,end_to_end_seconds,gate_and_DP_seconds,peak_GPU_allocated_MiB,timing_repeat
+profile,0.25,51,433,108,51,57,10.699506099997961,0.0021674000017810613,147.99169921875,0

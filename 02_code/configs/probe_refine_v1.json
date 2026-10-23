@@ -1,0 +1,35 @@
+{
+  "exploratory": true,
+  "timestamp_note": "Saved before observing probe-refinement outcomes; the source dataset has already been used for prior exploratory search.",
+  "research_question": "Does observing one depth frame per event improve benefit estimation enough to justify its mandatory probe cost, compared with allocation from RGB alone?",
+  "setting": "Offline recorded-event batch; encode RGB for all events; at positive feasible budgets encode one temporal-centre depth frame for every event; choose RGB fallback or one/three/six/up-to-twelve depth-frame score. No future-online or sensor purchase saving claim.",
+  "depth_levels": [
+    0,
+    1,
+    3,
+    6,
+    12
+  ],
+  "budget_caps": [
+    0,
+    0.125,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "cost": "Probe is charged even if final score reverts to RGB; marginal cost max(min(k,n)-1,0); all mandatory probe frames are paid before refinement. Nested temporal frame order prevents recomputing the probe.",
+  "training_target": "Training-animal leave-one-out |y-f_RGB|-|y-f_action|, inherited from independently fitted action scorers; fixed validation-selected base parameter identities.",
+  "gate": "RBF KRR, training-median bandwidth multiplier .5/1/2; alpha .01/.1/1/10/100. Probe gate uses frozen RGB+one-depth descriptors; comparison uses RGB-only features with the same mandatory probe costs.",
+  "selection": "Mean validation routed MAE at .25/.5/.75 caps; no test reference enters gate, action choice or allocation.",
+  "methods": [
+    "Probe_crossfit",
+    "Probe_insample",
+    "Probe_shuffled",
+    "RGB_gate_with_probe_cost",
+    "Probe_greedy_ratio"
+  ],
+  "primary_endpoint": "Event MAE averaged over .25/.5/.75 declared caps; also full resource curve, per-animal and per-class MAE, RMSE, rounded accuracy and quadratic kappa. All events must be scored.",
+  "ablation_logic": "Same action scorers, animals, sample pool, descriptor encoder and cost accounting; vary only gate observation, target construction or allocator. Compare prior no-probe allocation separately under the same total depth-frame cap.",
+  "statistics": "Nominal fixed-model paired animal-cluster bootstrap; source exploration is disclosed; no equivalence margin selected after seeing results."
+}

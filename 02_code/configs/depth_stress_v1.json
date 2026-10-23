@@ -1,0 +1,28 @@
+{
+  "exploratory": true,
+  "profiles": [
+    "random_drop_10",
+    "random_drop_30",
+    "central_hole_25"
+  ],
+  "random_masks": "Per-frame stable SHA256(pair_id + profile) seed, independent Bernoulli removal of10% or30% of originally positive pixels; set to0 before recomputing1st/99th-percentile normalisation.",
+  "central_hole": "Zero a central rectangle with half native width and half native height; geometric area about25%, actual positive-pixel loss recorded separately.",
+  "methods": [
+    "Score_profile_RBF",
+    "Score_profile_insample_features",
+    "Multilevel_strict_crossfit",
+    "Binary_strict_crossfit",
+    "Uniform_max_affordable",
+    "Validation_fixed_level",
+    "RGB_only",
+    "RGBD_all"
+  ],
+  "budget_caps": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "rules": "All nine previously fitted outer models and gates frozen. Regenerate corrupted depth descriptors from native files; RGB unchanged. The score-profile gate observes only the newly corrupted one-frame score before allocation. Existing RGB-only decisions remain unchanged. No corruption-specific tuning.",
+  "scope": "Artificial stress tests on the same source events, not new cattle, sensor calibrations, physical noise validation or independent field evidence.",
+  "zero_depth_case": "Complete missing-depth handling falls back to RGB and is reported as handling, not evidence of a learned robustness gain. No synthetic scores or labels."
+}

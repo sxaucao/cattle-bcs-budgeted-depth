@@ -1,0 +1,21 @@
+{
+  "version": "exploratory-frozen-foundation-episode-consensus-v1",
+  "created_date": "2026-10-23",
+  "exploratory": true,
+  "prior_outcomes_observed": "ResNet, distillation, ordinal, regression, graph, relief and distributional source outcomes; independent dairy data were also previously evaluated with ResNet representations",
+  "hypothesis": "With few independent animal groups, a frozen self-supervised encoder and an episode-consensus regional descriptor may be more useful than copying a small supervised depth teacher. Test the regional descriptor against the same encoder with global, fixed-centre, frame-local and low-similarity controls.",
+  "encoder": "Official DINOv2 ViT-S/14, no registers, frozen; exact source commit and checkpoint SHA256 recorded in models/dinov2/acquisition.json",
+  "input": "Native RGB or frame-normalised numeric depth independently letterboxed to 224x224; no RGB-depth pixel alignment used; ImageNet channel mean/std; depth repeated to three channels",
+  "patch_validity": "Patch centres must lie within the resized original image area, excluding letterbox padding",
+  "centre_anchor": "Patch centres within x=0.35..0.65 and y=0.15..0.85 of the resized native image; uniform mean of L2-normalised patch tokens, normalised to unit length",
+  "episode_anchor": "Unit-normalised mean of all available frame centre anchors in that episode; no labels or other episodes used",
+  "consensus_pool": "Select top 25 percent of valid patch tokens by cosine similarity to the episode anchor, uniform average, normalise. No frame or target event is rejected. This is a regional descriptor, not a validated anatomical segmentation.",
+  "controls": "CLS only; CLS plus global valid-token mean; CLS plus fixed centre-token mean; CLS plus top-25-percent frame-local anchor; CLS plus bottom-25-percent episode similarity; RGB/depth global and consensus fusion",
+  "episode_aggregation": "L2 normalise each frame CLS and pooled vector; average across the same maximum 12 unique frames; L2 normalise each episode component; concatenate components with equal energy",
+  "primary_RGB_contrast": "DINO_RGB_consensus_SVR versus DINO_RGB_global_SVR and DINO_RGB_centre_SVR",
+  "primary_RGBD_contrast": "DINO_RGBD_consensus_SVR versus DINO_RGBD_global_SVR; not a training-only-depth claim",
+  "regression": "RBF SVR epsilon=0.1, C=1/alpha; alpha in [0.01,0.1,1,10], bandwidth=training median squared distance times [0.5,1,2]; inner-validation native-score MAE selects one setting, test used for evaluation only",
+  "independent_dairy": "Same fixed RGB feature recipe and train/validation/test cow-group splits, separate supervised calibration to the mean of two native dairy scores; source and target scores never merged or rescaled to one another",
+  "all_arms_retained": true,
+  "claims": "DINOv2 and regional pooling are prior ideas. The episode-consensus construction and its controls form an application-specific candidate; effectiveness and anatomical meaning are empirical questions, not assumptions."
+}

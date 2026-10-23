@@ -1,0 +1,30 @@
+{
+  "version": "exploratory-animal-balanced-ordinal-kernel-fusion-v1",
+  "exploratory": true,
+  "prior_outcomes_observed": "All earlier source outcomes including foundation global/centre/consensus pooling; no confirmatory holdout claim",
+  "inputs": "Fixed DINOv2 RGB/depth global descriptors from foundation_pooling_v1, unchanged 151 events and group splits",
+  "base_kernels": "Separate RBF kernels for RGB and depth; each training pairwise median squared distance sets its bandwidth, times [0.5,1,2]",
+  "group_weights": "1 divided by the number of training episodes from that animal group, normalised to sum one; only for kernel alignment unless explicitly marked unbalanced",
+  "ordinal_target": "Binary cumulative code z_ik=1(y_i>k), k=2,3,4,5; target kernel Z Z^T. No invented new ordinal loss or first kernel-alignment claim.",
+  "alignment": "Weighted centring H=I-1 w^T, A_m=diag(sqrt(w)) H K_m H^T diag(sqrt(w)); unit Frobenius norms. Solve nonnegative two-variable quadratic min(v^T M v - 2 a^T v), M_mn=<A_m,A_n>, a_m=<A_m,A_y>, ridge=1e-8. Normalise v to sum one and combine the original PSD RBF kernels.",
+  "arms": [
+    "DINO_equal_kernel_SVR",
+    "DINO_ordinal_align_SVR",
+    "DINO_categorical_align_SVR",
+    "DINO_linear_align_SVR",
+    "DINO_unbalanced_ordinal_align_SVR",
+    "DINO_shuffled_ordinal_align_SVR",
+    "DINO_validation_weighted_kernel_SVR"
+  ],
+  "validation_weight_grid": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "SVR": "epsilon=.1, C=1/alpha, alpha in [.01,.1,1,10]; inner-validation MAE selects bandwidth and C, target labels used for alignment come only from training groups",
+  "shuffled_control": "Fixed permutation of training labels only for alignment target, true training labels still used by SVR; all permutations saved",
+  "uncertainty": "Animal-group paired bootstrap of out-of-fold event errors, conditional on fitted models; report effects versus equal kernel mixture and same-encoder concatenation",
+  "novelty_scope": "Application-specific adaptation of established alignment learning to repeated-animal ordinal BCS data; effectiveness must exceed matched controls before being called a useful new method"
+}

@@ -1,0 +1,37 @@
+{
+  "version": "exploratory-multilevel-depth-v1",
+  "exploratory": true,
+  "budget_caps": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "depth_levels": [
+    1,
+    3,
+    6,
+    12
+  ],
+  "frame_orders": [
+    "temporal_spread",
+    "RGB_diversity"
+  ],
+  "setting": "Offline recorded-event batch; all existing RGB frames encoded first; nested depth frame subsets chosen without consulting depth content or reference labels.",
+  "frame_order_rule": "Start with temporal centre, then farthest temporal index; or start nearest RGB descriptor mean, then farthest RGB descriptor from selected set. Ties use original ordered row. These are experimental comparators, not invented algorithms.",
+  "cost": "min(requested frames, available selected unique frames); all RGB work retained; no padding charged",
+  "base_models": "Same frozen DINOv2 features and SVR hyperparameter grid as the previous full-depth baseline; 1/3/6-frame depth scorers selected on inner validation only; full-depth scorer reused exactly",
+  "benefit": "Absolute RGB error minus action-specific RGBD error from leave-one-training-animal-out base fits; gate sees RGB only",
+  "allocation": "Exact multiple-choice knapsack; one of zero/1/3/6/up-to-12 depth frames per event; action benefits need not increase with frame count",
+  "gate_selection": "Mean inner validation routed MAE at .25/.5/.75 frame caps; KRR bandwidth multipliers .5/1/2; ridge penalties .01/.1/1/10/100",
+  "controls": [
+    "binary_only_crossfit",
+    "multilevel_crossfit",
+    "multilevel_insample",
+    "multilevel_shuffled",
+    "multilevel_oracle"
+  ],
+  "reference_integrity": "No test label used by deployable frame ordering, benefit gate, or allocation. Oracle is explicitly diagnostic.",
+  "prior_outcomes": "Source outer test outcomes were already observed during prior exploratory method search; do not label this confirmatory or an independent new test."
+}

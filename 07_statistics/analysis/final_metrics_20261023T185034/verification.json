@@ -1,0 +1,16 @@
+{
+  "completed_utc": "2026-10-23T10:50:39.448064+00:00",
+  "source_runs": [
+    "04_grouped_validation/runs/repeated_groups_20261023T184936",
+    "05_budget_baselines/runs/matched_controls_20261023T185006",
+    "06_ablation/runs/decision_profile_20261023T185030"
+  ],
+  "methods": 24,
+  "all_events_per_repeat": 151,
+  "groups": 52,
+  "error_reconstruction_passed": true,
+  "all_repeat_seed_cohorts_unique": true,
+  "random_policy_replicates_not_counted_as_animals": true,
+  "bootstrap_replicates": 10000,
+  "exploratory": true
+}

@@ -1,0 +1,37 @@
+{
+  "version": "data-protocol-v1",
+  "source_dataset": "01_data_provenance/data/raw_snapshot/dataset",
+  "legacy_project": "recorded_external_environment/cattle",
+  "previous_article_pdf": "recorded_external_environment/animals-16-03040.pdf",
+  "dataset_doi": "10.5061/dryad.tqjq2bw4s",
+  "previous_article_doi": "10.3390/ani16193040",
+  "historical_counts": {
+    "extracted_rgb_depth_pairs": 5940,
+    "removed_pairs": 2125,
+    "retained_pairs": 3815,
+    "evidence": "Previous Animals article, section 2.1.1 and Table 1; aggregate counts only. Not reconstructed from raw ROS bags."
+  },
+  "pair_rule": "Exact f_<integer>_rgb.<image-extension> and f_<same integer>_depth.npy within the same BCS/episode directory; ambiguous keys are never silently overwritten.",
+  "animal_group_rule": "First numeric Cow identifier inherited from the previous study, e.g. Cow_5_1 -> Cow_5. Grouping identifier, not independently verified RFID identity.",
+  "label_rule": "Integer BCS 2-6 inherited from the parent directory. Class index = BCS-2. Original scale 1-9, with only 2-6 represented here; no new expert rescoring.",
+  "quality_policy": "Audit all files. No posture, angle, score, or prediction-confidence filtering. Record corruption, missing modalities, invalid depth and exact duplicates separately. Stop before training if unresolved structural errors or cross-group duplicates exist.",
+  "split_policy": "Reuse and independently reconcile legacy animal-wise outer three-fold membership for matched comparisons. Inner validation uses only non-test groups, seed fixed in advance. No frame-wise split.",
+  "preprocessing": {
+    "rgb_mode": "RGB",
+    "crop": "none; full image",
+    "height": 160,
+    "width": 160,
+    "rgb_resize": "Pillow bilinear",
+    "rgb_cache_dtype": "uint8",
+    "rgb_model_input": "float32 / 255; any later normalisation must be logged",
+    "depth_valid": "finite and >0",
+    "depth_scale": "Per-frame valid-pixel 1st/99th percentiles; clip and scale to [0,1]; invalid pixels zero. Constant-valid maps flagged and set to zero.",
+    "depth_resize": "nearest neighbour, retaining the invalid mask",
+    "depth_cache_dtype": "float16",
+    "depth_units": "Unverified in prepared NPY files; no conversion to physical distance claimed.",
+    "augmentation": "Not applied to the persistent cache. Any training-only augmentation logged by seed/config; augmented views do not increase independent sample counts.",
+    "test_frame_selection": "Deterministic equally spaced RGB frame indices within each eligible episode; no use of depth, geometry or prediction confidence. Log padding repetitions separately."
+  },
+  "font": "Times New Roman",
+  "figure_language": "English"
+}

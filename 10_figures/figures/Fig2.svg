@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="493.228346456693" height="229.60629921259846" preserveAspectRatio="xMinYMin meet" viewBox="0 0 493 229" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="493.228346456693" height="229.60629921259846"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-229)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="0" y="218" style="font-family: TNRBold; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,436) scale(1,-1)">Training: leave one animal group out</text>
+			<rect x="0" y="136" width="150" height="65" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="46.6756591796875" y="188" style="font-family: TNRBold; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,376) scale(1,-1)">Fit base scorers</text>
+			<text x="41.718017578125" y="176" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,352) scale(1,-1)">Exclude held group</text>
+			<text x="47.8543701171875" y="164" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,328) scale(1,-1)">Retune on inner</text>
+			<text x="45.3724365234375" y="152" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,304) scale(1,-1)">validation groups</text>
+			<path d="M 152,168 L 168,168 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="168 168, 164 170.3, 164 165.7" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<rect x="170" y="136" width="150" height="65" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="210.17822265625" y="188" style="font-family: TNRBold; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,376) scale(1,-1)">Held-animal scores</text>
+			<text x="210.539306640625" y="176" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,352) scale(1,-1)">RGB and one-frame</text>
+			<text x="217.1114501953125" y="164" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,328) scale(1,-1)">profiles + action</text>
+			<text x="216.8043212890625" y="152" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,304) scale(1,-1)">error differences</text>
+			<path d="M 322,168 L 338,168 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="338 168, 334 170.3, 334 165.7" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<rect x="340" y="136" width="150" height="65" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="387.619873046875" y="188" style="font-family: TNRBold; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,376) scale(1,-1)">Fit benefit gate</text>
+			<text x="379.240234375" y="176" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,352) scale(1,-1)">Standardised 8-value</text>
+			<text x="393.64208984375" y="164" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,328) scale(1,-1)">score profile</text>
+			<text x="381.718017578125" y="152" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,304) scale(1,-1)">No outer-test labels</text>
+			<text x="0" y="112" style="font-family: TNRBold; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,224) scale(1,-1)">Inference: charge every probe before choosing refinements</text>
+			<rect x="0" y="37" width="90" height="52" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="15.727294921874996" y="76" style="font-family: TNRBold; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,152) scale(1,-1)">All RGB frames</text>
+			<text x="26.23193359375" y="64" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,128) scale(1,-1)">RGB score</text>
+			<path d="M 91,63 L 99,63 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="99 63, 95 65.3, 95 60.7" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<rect x="100" y="37" width="90" height="52" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="114.3016357421875" y="76" style="font-family: TNRBold; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,152) scale(1,-1)">One depth probe</text>
+			<text x="121.521240234375" y="64" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,128) scale(1,-1)">1-frame score</text>
+			<path d="M 191,63 L 199,63 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="199 63, 195 65.3, 195 60.7" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<rect x="200" y="37" width="90" height="52" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="221.7515869140625" y="76" style="font-family: TNRBold; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,152) scale(1,-1)">Score profile</text>
+			<text x="214.9034423828125" y="64" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,128) scale(1,-1)">Budget allocation</text>
+			<path d="M 291,63 L 299,63 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="299 63, 295 65.3, 295 60.7" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<rect x="300" y="37" width="90" height="52" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="309.5888671875" y="76" style="font-family: TNRBold; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,152) scale(1,-1)">Extra depth frames</text>
+			<text x="317.968505859375" y="64" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,128) scale(1,-1)">Nested 1/3/6/12</text>
+			<path d="M 391,63 L 399,63 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="399 63, 395 65.3, 395 60.7" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<rect x="400" y="37" width="90" height="52" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="412.66015625" y="76" style="font-family: TNRBold; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,152) scale(1,-1)">Final event scores</text>
+			<text x="406.9969482421875" y="64" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,128) scale(1,-1)">RGB fallback allowed</text>
+			<text x="0" y="15" style="font-family: TNR; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,30) scale(1,-1)">A probe remains charged even when the final score uses RGB</text>
+		</g>
+	</g>
+</svg>

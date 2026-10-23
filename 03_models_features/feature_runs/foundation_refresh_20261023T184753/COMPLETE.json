@@ -1,0 +1,9 @@
+{
+  "completed_utc": "2026-10-23T10:49:29.440764+00:00",
+  "events": 151,
+  "selected_frames": 1245,
+  "encoder_frozen": true,
+  "weights_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+  "source_input_manifest": "03_models_features/feature_runs/foundation_refresh_20261023T183043",
+  "script_sha256": "da360a33d98a1ef0b20c0957eacd4eff5c962436a2312593ded018ddf6e82afb"
+}

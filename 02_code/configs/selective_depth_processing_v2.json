@@ -1,0 +1,44 @@
+{
+  "version": "exploratory-cross-animal-benefit-with-frame-cost-cap-v2",
+  "exploratory": true,
+  "parent": "selective_depth_processing_v1; all initial event-budget outcomes retained",
+  "setting": "Offline batch processing of already recorded RGB-D events; save depth-frame encoding work. No avoided sensor acquisition, camera purchase, or causal online-triggering claim.",
+  "event_cost": "Number of distinct, actually evaluated frames in that event, between 1 and 12; no padded slots count as work. RGB frames are processed for all events. A depth choice processes every selected frame in that event.",
+  "budget_caps": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "allocation": "Exact 0-1 knapsack maximises sum of predicted event absolute-error reductions under floor(cap*total depth frames in the batch). Nonpositive benefit need not consume budget. All events still receive an RGB or RGBD score.",
+  "training_targets": "Group-leave-one-out RGB and RGBD predictions on training animals, with base hyperparameter identities fixed by inner validation; paired benefit=|y-RGB|-|y-RGBD|. In-sample benefit and shuffled benefit are controls.",
+  "gate": "RGB kernel ridge with alpha [.01,.1,1,10,100] and training-median bandwidth multiplier [.5,1,2]; select by mean validation routing MAE at frame caps .25,.5,.75",
+  "gates": [
+    "Crossfit_benefit_knapsack",
+    "Insample_benefit_knapsack",
+    "Crossfit_RGB_error_knapsack",
+    "Shuffled_benefit_knapsack",
+    "RGB_variance_knapsack",
+    "RGB_distance_knapsack",
+    "Random_affordable_order",
+    "Oracle_benefit_knapsack"
+  ],
+  "random_seeds": [
+    4101,
+    4102,
+    4103,
+    4104,
+    4105,
+    4106,
+    4107,
+    4108,
+    4109,
+    4110
+  ],
+  "primary_endpoint": "Native-scale event MAE integrated over the declared frame-budget cap from 0 to1. Report actual realised frame counts separately; do not extrapolate a realised-cost curve beyond a method's attained cost.",
+  "controls": "Ordinary predicted RGB error, posterior-style RGB kernel variance, nearest training distance, in-sample target, shuffled target, random affordable event order, and a labelled oracle diagnostic. Direct all-RGBD scoring remains a separate baseline even when the cap=1 policy leaves budget unused.",
+  "uncertainty": "10000 paired animal-group bootstrap resamples, holding fitted models fixed. Nominal intervals are exploratory and do not erase the preceding adaptive method search.",
+  "checks": "All events scored; actual depth frames <= cap; zero-budget equals RGB base; saved scores reconstruct from gate decisions; knapsack objective checked against brute force for small cases; costs contain no padding; no test references in any deployable gate",
+  "scope": "Single source, filename-derived identity groups; no independent external RGB-D cohort validates this gate yet. Dairy RGB-only data are not evidence of depth-routing validity."
+}

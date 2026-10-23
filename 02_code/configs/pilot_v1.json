@@ -1,0 +1,35 @@
+{
+  "purpose": "Training/validation-only feasibility pilot, not a final experiment and not a proposed novel model",
+  "outer_fold_reserved": 0,
+  "seeds": [
+    20261023,
+    20261024,
+    20261025
+  ],
+  "encoder": "ResNet18 with locally cached ImageNet-1K weights; fully frozen, evaluation mode",
+  "weights_path": "recorded_external_environment/resnet18-f37072fd.pth",
+  "feature_batch_size": 24,
+  "normalisation": "RGB /255, then ImageNet mean [0.485,0.456,0.406] and std [0.229,0.224,0.225]. Normalised depth repeated over 3 channels uses the same fixed transform for this pilot only.",
+  "episode_aggregation": "Arithmetic mean of non-padding evaluation-slot feature vectors; each distinct RGB representative used at most once",
+  "head": "Single linear layer; L2-normalise each modality's episode vector before fitting",
+  "head_steps": 350,
+  "head_learning_rate": 0.03,
+  "head_weight_decay": 0.01,
+  "loss": "Cross entropy with inverse training-episode class frequency, normalised to mean weight one",
+  "variants": [
+    "RGB",
+    "Depth",
+    "RGBD",
+    "Acquisition_metadata_only"
+  ],
+  "acquisition_metadata": [
+    "proportion_of_sampled_depth_frames_with_native_width_848",
+    "mean_positive_finite_depth_fraction",
+    "log1p_primary_pool_count",
+    "padding_fraction"
+  ],
+  "acquisition_standardisation": "Mean and standard deviation fitted on training episodes only",
+  "selection": "Fixed steps, no validation checkpoint selection or hyperparameter search",
+  "test_use": "None: held-out test episodes are excluded before reading image/depth cache rows or extracting features",
+  "reporting": "Validation metrics of all variants and all seeds; not evidence of novel-model effectiveness or cross-farm performance"
+}

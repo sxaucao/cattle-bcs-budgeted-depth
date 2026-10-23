@@ -1,0 +1,28 @@
+{
+  "version": "external-transfer-v1-before-target-model-predictions",
+  "source": "https://iplab.dmi.unict.it/legacy/BCS/",
+  "catalogue": "https://iplab.dmi.unict.it/legacy/BCS/dataset.html",
+  "license": "Academic research use; acknowledge BCS Database and its original papers. Do not redistribute raw images in a combined dataset; no commercial use.",
+  "group_rule": "Numeric filename prefix before the first underscore; reconcile count with 29 groups stated by the official database",
+  "reference": "Retain BCS1 and BCS2 exactly; native regression target = arithmetic mean of the two scores, reported with inter-rater absolute differences",
+  "scale": "Native dairy-cow scale; no conversion to the source beef-cattle score categories",
+  "preprocessing": "Original RGB image converted to RGB and aspect-preserving bilinear letterbox to 160x160; no manual anatomical-point crop, no depth input",
+  "outer_group_folds": 3,
+  "split_seed": 20261023,
+  "inner_validation_groups": 3,
+  "source_representations": [
+    "ImageNet",
+    "RGB_CE",
+    "RGB_gaussian",
+    "RGB_rgb_prototype",
+    "RGB_rgbd_prototype",
+    "RGB_entropy_matched"
+  ],
+  "source_replication": "All three source animal-group folds and all three source seeds; no source checkpoint selected on target test performance",
+  "target_calibration": "Frozen representation, L2-normalised mean features, ridge regression; alpha chosen in [0.01,0.1,1,10,100] by target inner-validation MAE only",
+  "clipping": "Predicted target score clipped to [1,5], fixed without inspecting test outcomes",
+  "primary_comparison": "RGB_rgbd_prototype versus RGB_gaussian, RGB_rgb_prototype and RGB_CE on native target-score MAE",
+  "interpretation": "Supervised frozen-representation transfer to a second data source, with target labels used for calibration; not zero-shot external validation of the original scoring head",
+  "uncertainty": "Paired target-animal cluster bootstrap of source-replicate-averaged absolute errors; source seeds and folds are not additional target animals",
+  "selection_rule": "Retain all registered representations and target folds regardless of results"
+}

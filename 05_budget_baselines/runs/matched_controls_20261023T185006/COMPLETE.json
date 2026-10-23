@@ -1,0 +1,9 @@
+{
+  "completed_utc": "2026-10-23T10:50:24.833108+00:00",
+  "repeats": 3,
+  "folds": 3,
+  "uniform_levels": 13,
+  "all_budgets_respected": true,
+  "exploratory": true,
+  "script_sha256": "03253e7128dbec1fedef7ed16368637091c9468154864b16156062b38441499e"
+}

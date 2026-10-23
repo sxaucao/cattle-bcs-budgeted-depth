@@ -1,0 +1,36 @@
+{
+  "exploratory": true,
+  "reason": "Strong cost-matched uniform controls beat high-dimensional gates at moderate budgets. Test whether honest low-dimensional score disagreement predicts depth returns better.",
+  "features": [
+    "RGB score",
+    "one-depth score",
+    "signed difference",
+    "absolute difference",
+    "squared difference",
+    "minimum score",
+    "maximum score",
+    "available frames"
+  ],
+  "training_features": "Predictions of base scorers excluding the entire training animal, with HPO repeated after its exclusion. Validation/test use fitted full-training base scorers. No future depth action score is observed by the gate.",
+  "target": "Same strict cross-animal action-specific absolute-error reductions saved in experiment34; all models and data identical.",
+  "paid_probe": "One depth frame for every event at a positive feasible cap, including those whose final score reverts to RGB; no hidden extra inference.",
+  "primary_candidate": "Score_profile_RBF",
+  "variants": [
+    "Score_profile_RBF",
+    "Score_profile_no_count",
+    "Score_profile_insample_features",
+    "Score_profile_insample_targets",
+    "Score_profile_shuffled",
+    "Score_profile_linear"
+  ],
+  "standardisation": "Mean and standard deviation of training gate features only; constant columns divide by1",
+  "selection": "Same 15-point gate grid and mean validation MAE at .25/.5/.75 caps; linear alternative uses ridge alpha .01/.1/1/10/100 with an unpenalised intercept",
+  "budget_caps": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "split_history": "Uses all three stored repeated splits. Further source exploration after observing earlier outcomes; not a fresh independent validation set."
+}

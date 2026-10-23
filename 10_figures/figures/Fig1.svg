@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="493.228346456693" height="187.08661417322836" preserveAspectRatio="xMinYMin meet" viewBox="0 0 493 187" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="493.228346456693" height="187.08661417322836"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-187)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0.0" y="92" width="104.88188976377954" height="65" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="15.61660406157727" y="144" style="font-family: TNRBold; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,288) scale(1,-1)">5940 extracted pairs</text>
+			<text x="18.09646246001477" y="132" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,264) scale(1,-1)">Published aggregate</text>
+			<text x="19.39553472563977" y="120" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,240) scale(1,-1)">Historical raw bags</text>
+			<text x="28.72146246001477" y="108" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,216) scale(1,-1)">not re-audited</text>
+			<path d="M 106.88189,124 L 125.559055,124 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="125.5591 124, 121.5591 126.3, 121.5591 121.7" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<rect x="127.55905511811025" y="92" width="104.88188976377953" height="65" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="144.34814453125003" y="144" style="font-family: TNRBold; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,288) scale(1,-1)">3815 archived pairs</text>
+			<text x="151.67358398437503" y="132" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,264) scale(1,-1)">7630 native files</text>
+			<text x="153.79858398437503" y="120" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,240) scale(1,-1)">All copied files</text>
+			<text x="150.84558105468753" y="108" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,216) scale(1,-1)">SHA256 verified</text>
+			<path d="M 234.440945,124 L 253.11811,124 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="253.1181 124, 249.1181 126.3, 249.1181 121.7" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<rect x="255.1181102362205" y="92" width="104.88188976377955" height="65" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="279.9340551181103" y="144" style="font-family: TNRBold; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,288) scale(1,-1)">3177 RGB reps</text>
+			<text x="269.9150121493603" y="132" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,264) scale(1,-1)">Within-event decoded</text>
+			<text x="274.8581273837353" y="120" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,240) scale(1,-1)">RGB consolidation</text>
+			<text x="274.0384252352978" y="108" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,216) scale(1,-1)">No posture filtering</text>
+			<path d="M 362,124 L 380.677165,124 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="380.6772 124, 376.6772 126.3, 376.6772 121.7" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<rect x="382.6771653543308" y="92" width="104.88188976377955" height="65" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="404.90741687684556" y="144" style="font-family: TNRBold; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,288) scale(1,-1)">1245 real frames</text>
+			<text x="399.70905261903306" y="132" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,264) scale(1,-1)">Up to 12 per episode</text>
+			<text x="402.07477527528306" y="120" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,240) scale(1,-1)">151 events retained</text>
+			<text x="399.94770007997056" y="108" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,216) scale(1,-1)">No padding encoded</text>
+			<text x="0" y="171" style="font-family: TNR; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,342) scale(1,-1)">2125 historical exclusions: published total only</text>
+			<text x="0" y="65" style="font-family: TNRBold; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,130) scale(1,-1)">Retained-event cohort</text>
+			<text x="17.87109375" y="43" style="font-family: TNRBold; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,86) scale(1,-1)">BCS 2</text>
+			<text x="15.128906249999998" y="27" style="font-family: TNR; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,54) scale(1,-1)">6 events</text>
+			<text x="1.1962890624999964" y="11" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,22) scale(1,-1)">3 identity groups</text>
+			<text x="115.87109375" y="43" style="font-family: TNRBold; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,86) scale(1,-1)">BCS 3</text>
+			<text x="110.87890625" y="27" style="font-family: TNR; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,54) scale(1,-1)">20 events</text>
+			<text x="97.0712890625" y="11" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,22) scale(1,-1)">13 identity groups</text>
+			<text x="213.87109375" y="43" style="font-family: TNRBold; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,86) scale(1,-1)">BCS 4</text>
+			<text x="208.87890625" y="27" style="font-family: TNR; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,54) scale(1,-1)">50 events</text>
+			<text x="195.0712890625" y="11" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,22) scale(1,-1)">34 identity groups</text>
+			<text x="311.87109375" y="43" style="font-family: TNRBold; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,86) scale(1,-1)">BCS 5</text>
+			<text x="306.87890625" y="27" style="font-family: TNR; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,54) scale(1,-1)">51 events</text>
+			<text x="293.0712890625" y="11" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,22) scale(1,-1)">34 identity groups</text>
+			<text x="409.87109375" y="43" style="font-family: TNRBold; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,86) scale(1,-1)">BCS 6</text>
+			<text x="404.87890625" y="27" style="font-family: TNR; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,54) scale(1,-1)">24 events</text>
+			<text x="391.0712890625" y="11" style="font-family: TNR; font-size: 8.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,22) scale(1,-1)">22 identity groups</text>
+		</g>
+	</g>
+</svg>

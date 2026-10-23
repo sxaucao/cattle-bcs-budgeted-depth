@@ -1,0 +1,42 @@
+{
+  "version": "exploratory-cross-animal-depth-value-routing-v1",
+  "exploratory": true,
+  "question": "Can RGB-only information allocate a limited number of depth-processing calls to events where joint RGBD scoring is most useful?",
+  "setting": "Retrospective batch processing of recorded events. Both sensors were recorded; the resource saved is depth encoding/inference work, not sensor purchase or depth capture. No causal online-routing claim.",
+  "base_models": "Validation-selected frozen DINOv2 RGB-only and direct RGBD global SVRs, identical to foundation_pooling_v1",
+  "training_target": "For each training animal, refit both base SVRs excluding all that animal's episodes, with hyperparameter identities fixed by the original inner validation. Benefit = absolute RGB error minus absolute RGBD error for those held-animal predictions.",
+  "gate": "RGB RBF kernel ridge regression predicts this benefit from training RGB features. Alpha [.01,.1,1,10,100], kernel scale [.5,1,2]. Select gate hyperparameters by average validation routing MAE at depth fractions .25,.5,.75, where validation references and both fixed base predictions are available.",
+  "depth_fractions": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "batch_budget": "Within each evaluation fold, process depth for the top floor(fraction*n_events) gate scores; only RGB-derived scores enter ranking, never test references. Every event gets a score, using RGB alone if depth is not processed.",
+  "controls": [
+    "Predicted_crossfit_benefit",
+    "Predicted_crossfit_RGB_error",
+    "RGB_kernel_variance",
+    "RGB_nearest_training_distance",
+    "Random_depth_allocation",
+    "Shuffled_benefit_gate",
+    "Oracle_benefit_upper_bound"
+  ],
+  "random_seeds": [
+    4101,
+    4102,
+    4103,
+    4104,
+    4105,
+    4106,
+    4107,
+    4108,
+    4109,
+    4110
+  ],
+  "oracle": "Uses held-out reference errors only for a labelled diagnostic upper bound; never deployable and never used for gate selection",
+  "primary_endpoint": "MAE integrated over realised depth-processing fraction [0,1], compared with random allocation and ordinary RGB uncertainty; per-event cohort denominator fixed at 151",
+  "secondary": "Native-score MAE, per-grade errors, number of depth calls, total modality-encoder calls, and routing benefit at each fraction",
+  "novelty_scope": "An event-level adaptation of established value-of-information and selective-computation ideas. All source outcomes from prior method development are known, so the new study remains exploratory."
+}

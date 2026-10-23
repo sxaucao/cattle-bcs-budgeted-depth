@@ -1,0 +1,38 @@
+{
+  "version": "exploratory-cross-animal-residual-fusion-v1",
+  "exploratory": true,
+  "rationale": "Marginal ordinal alignment collapsed to depth-only kernels and lost the observed joint-feature benefit. Learn the complementary correction from errors made on held-out training animals, rather than from marginal label alignment or in-sample teacher confidence.",
+  "base": "DINOv2 frozen depth global descriptor with the same validation-selected RBF SVR as foundation_pooling_v1",
+  "residual_targets": "For each training animal group, refit the base on all other training animals using fixed inner-validation-selected base hyperparameters; predict every episode in that left-out group. Residual = true BCS minus that held-group base prediction. The validation and test animals never enter these fits.",
+  "correction": "A separate RBF SVR predicts residuals from RGB-only, depth-only, concatenated RGBD, or a product-kernel RGBD representation. Final score = clip(base_depth + lambda * correction, 2,6). Depth remains required at inference; no RGB-only deployment claim.",
+  "arms": [
+    "Crossfit_RGB_residual_SVR",
+    "Crossfit_Depth_residual_SVR",
+    "Crossfit_RGBD_residual_SVR",
+    "Crossfit_product_residual_SVR",
+    "Insample_RGBD_residual_SVR",
+    "Shuffled_crossfit_RGBD_residual_SVR",
+    "Depth_validation_bias_calibration"
+  ],
+  "correction_alpha_grid": [
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "correction_scale_grid": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "lambda_grid": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "selection": "All correction settings selected by inner-validation MAE; exact ties retain earlier grid point. Lambda=0 explicitly permits fallback to the base if no correction validates.",
+  "controls": "Same-modality correction; in-sample residual correction; fixed shuffled residual labels; one-parameter median validation-bias correction; compare against same-encoder depth-only and direct RGBD SVR",
+  "scope": "Application-specific cross-animal residual fusion built on established stacked generalisation; no claim to invent out-of-fold stacking. These source results remain exploratory after previous tests were observed."
+}

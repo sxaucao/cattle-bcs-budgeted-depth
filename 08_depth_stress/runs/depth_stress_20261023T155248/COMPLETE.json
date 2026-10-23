@@ -1,0 +1,15 @@
+{
+  "completed_utc": "2026-10-23T07:55:08.430727+00:00",
+  "profiles": [
+    "random_drop_10",
+    "random_drop_30",
+    "central_hole_25"
+  ],
+  "source_events": 151,
+  "source_frames_per_profile": 1245,
+  "all_existing_models_frozen": true,
+  "no_stress_specific_HPO": true,
+  "native_files_unchanged": true,
+  "independent_external_validation": false,
+  "script_sha256": "d64285a204fe3c8deceb9083c4691bf1513012558a3bd34a575ea9faf984132d"
+}

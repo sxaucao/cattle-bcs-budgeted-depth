@@ -1,0 +1,69 @@
+{
+  "version": "formal-v1-locked-before-outer-test-predictions",
+  "research_question": "Can training-only depth improve RGB episode BCS through ordinal transfer beyond standard distillation and acquisition-condition controls?",
+  "outer_folds": [
+    0,
+    1,
+    2
+  ],
+  "seeds": [
+    20261023,
+    20261024,
+    20261025
+  ],
+  "backbone": "ImageNet ResNet18; stages stem through layer3 frozen; layer4 and prediction head trained",
+  "pretrained_weights": "recorded_external_environment/resnet18-f37072fd.pth",
+  "feature_views": [
+    "original",
+    "horizontal_flip_before_frozen_encoder"
+  ],
+  "eval_view": "original",
+  "episode_frames": 12,
+  "pool": "Within-episode decoded-RGB representatives; same cohort for every variant",
+  "aggregation": "Mean of frame features, excluding padding completely",
+  "head": "Linear(512 per modality,128), ReLU, Dropout(0.3), Linear(128,5)",
+  "epochs": 60,
+  "early_stopping_patience": 15,
+  "minimum_epochs": 20,
+  "batch_episodes": 4,
+  "learning_rate_layer4": 0.0001,
+  "learning_rate_head": 0.0003,
+  "weight_decay": 0.001,
+  "gradient_clip": 5.0,
+  "class_weight": "Inverse square root of training episode counts; mean normalised to one",
+  "selection": "Lowest unweighted validation MAE using expected BCS, tie broken by validation cross entropy; test never used for selection",
+  "temperature": 2.0,
+  "hard_ordinal_weight": 0.5,
+  "distillation_weight": 0.5,
+  "teacher": "Depth-only trained on exactly the same training groups; checkpoint selected on validation only",
+  "cdf_definition": "q_k = P(BCS > k), k=2,3,4,5",
+  "boundary_weight": "max(0, (q_RGB-y_binary)^2-(q_Depth-y_binary)^2), computed with softened teacher probabilities on deterministic training episodes; weights detached, multiplied by the ordinal CDF squared loss, no sample deletion",
+  "weight_normalisation": "Divide by the global mean positive weight over training boundary targets; clamp weights to [0,4]; zero if no positive training weight",
+  "variants": [
+    "RGB_CE",
+    "Depth_CE",
+    "RGBD_CE",
+    "RGB_ordinal",
+    "RGB_self_KD",
+    "RGB_depth_KD",
+    "RGB_depth_ordinal",
+    "RGB_depth_benefit",
+    "RGB_shuffled_depth_benefit"
+  ],
+  "shuffle_control": "Permute training episode depth-teacher probability vectors within native-width-majority strata, requiring a different animal group where possible; fixed seed, mapping logged, no test inputs used",
+  "primary_endpoint": "Episode expected-score MAE on the original 1-9 scale (represented classes 2-6)",
+  "secondary_endpoints": [
+    "argmax MAE",
+    "accuracy",
+    "macro F1",
+    "QWK",
+    "absolute argmax error >=2 points",
+    "within-one accuracy",
+    "coverage"
+  ],
+  "uncertainty": "Animal-group cluster paired bootstrap of seed-averaged out-of-fold episode absolute errors; seeds and folds are not independent animal replicates",
+  "hypothesis": "Benefit-weighted ordinal transfer reduces expected-score MAE versus RGB_ordinal and conventional depth KD; directional empirical hypothesis, not a guaranteed result",
+  "negative_results": "Retain and report all prespecified variants, seeds and folds; no variant removal based on outer test results",
+  "data_reuse": "Existing public dataset and outer groups reused from the prior Animals study; preprocessing, training protocol and deployment question differ",
+  "scope": "Single-source dataset evaluation; no independent farm, prospective deployment or physical depth reconstruction claim"
+}

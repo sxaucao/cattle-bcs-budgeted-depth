@@ -1,0 +1,77 @@
+[
+  {
+    "file": "all_pairs_to_visual_pool.csv",
+    "sha256": "09e358770aac779638ada9b23b9f1b8e5a74c7053cd1fb57cb80d50958714760",
+    "bytes": 991139
+  },
+  {
+    "file": "class_counts.csv",
+    "sha256": "41c4c1460d8a9062be53705e6334efe9e944e52d347208c524a13bdb426c3923",
+    "bytes": 225
+  },
+  {
+    "file": "depth_float16.npy",
+    "sha256": "6c475aa4381b5b351375f698a72213e9a12d76ec6a5e2468afdd282493f966ca",
+    "bytes": 162662528
+  },
+  {
+    "file": "depth_valid_mask.npy",
+    "sha256": "1fb9b366c6fa470ffd1bee4f065aae2b9020e07e4e19872453bc502acf00288c",
+    "bytes": 81331328
+  },
+  {
+    "file": "episodes.csv",
+    "sha256": "28e1bf6c7ddeb5e282a4afd4d787c7b0d8cfd1722a3e957d6fe122ad65061192",
+    "bytes": 6160
+  },
+  {
+    "file": "evaluation_frame_slots.csv",
+    "sha256": "307532109ea5bc89a633e1133f7bd8761678d8a6dc8ffb9c7d752e2e2766a84c",
+    "bytes": 101168
+  },
+  {
+    "file": "exact_joint_duplicate_pairs.csv",
+    "sha256": "8c805150a3ccbaba35696c6bd2247d5331ffe6c0c97c4b37ef3edb073a5a0976",
+    "bytes": 15492
+  },
+  {
+    "file": "group_splits.csv",
+    "sha256": "10689a2aeb04c46cee9cbb5bd3cbfc87e7e42c96dd94e6169138f2885c3c10a0",
+    "bytes": 22033
+  },
+  {
+    "file": "inner_selection.json",
+    "sha256": "1bd8295550fff7eb466780e0dbf452bbc5c6eaf5b0b82a9d13ce85a9960e6a40",
+    "bytes": 1124
+  },
+  {
+    "file": "preprocessed_manifest.csv",
+    "sha256": "f703e425aa8f828e6607a2a9aa2eaec8c7e36104b1b0add430b9bfce692f7588",
+    "bytes": 1520786
+  },
+  {
+    "file": "preprocessing_v1.json",
+    "sha256": "f0be7067e84124b14a38f7bcf4e7468affaaea1e616ba333da584b1bbe34079a",
+    "bytes": 2485
+  },
+  {
+    "file": "rgb_uint8.npy",
+    "sha256": "2abf1ecb8b86417398d40a69c9237170d39aa73864969bb2872557f423e97f61",
+    "bytes": 243993728
+  },
+  {
+    "file": "split_counts.csv",
+    "sha256": "102b7e7d94082a4a2403baec556b4f838abff3046847920e6731718b9b28191c",
+    "bytes": 482
+  },
+  {
+    "file": "stage_ledger.csv",
+    "sha256": "6bf40e3877d20b58767d925a809cf07e8f7a5ac05eca2340ab27fc31f8418365",
+    "bytes": 1669
+  },
+  {
+    "file": "summary.json",
+    "sha256": "d991facb98cdc324fd4c0ee69515139e8d22b9f25d564e657df2526bf8cb06f4",
+    "bytes": 4849
+  }
+]

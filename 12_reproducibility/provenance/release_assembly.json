@@ -1,0 +1,79 @@
+{
+  "created_utc": "2026-10-23T08:06:11.640150+00:00",
+  "source_project": ".",
+  "release_root": ".",
+  "copied_pointers": [
+    {
+      "pointer": "latest_prepared.txt",
+      "relative_directory": "01_data_provenance/data/processed/prepare_20261023T102714"
+    },
+    {
+      "pointer": "latest_audit.txt",
+      "relative_directory": "12_reproducibility/provenance/audit_20261023T102309"
+    },
+    {
+      "pointer": "latest_foundation_experiment.txt",
+      "relative_directory": "03_models_features/feature_runs/foundation_20261023T115636"
+    },
+    {
+      "pointer": "latest_multilevel_depth.txt",
+      "relative_directory": "03_models_features/feature_runs/multilevel_depth_20261023T134007"
+    },
+    {
+      "pointer": "latest_repeated_validation.txt",
+      "relative_directory": "04_grouped_validation/runs/repeated_groups_20261023T153659"
+    },
+    {
+      "pointer": "latest_matched_controls.txt",
+      "relative_directory": "05_budget_baselines/runs/matched_controls_20261023T154107"
+    },
+    {
+      "pointer": "latest_decision_profile.txt",
+      "relative_directory": "06_ablation/runs/decision_profile_20261023T154532"
+    },
+    {
+      "pointer": "latest_final_metrics.txt",
+      "relative_directory": "07_statistics/analysis/final_metrics_20261023T155032"
+    },
+    {
+      "pointer": "latest_depth_stress.txt",
+      "relative_directory": "08_depth_stress/runs/depth_stress_20261023T155248"
+    },
+    {
+      "pointer": "latest_native_score_profile.txt",
+      "relative_directory": "09_native_benchmark/runs/native_profile_20261023T155707"
+    }
+  ],
+  "relocated_derived_inputs": [
+    {
+      "path": "03_models_features/feature_runs/foundation_20261023T115636/source_Depth_tokens/input_manifest.csv",
+      "old_sha256": "7db5621868abac1113978be3ed3de3ee04993a2ab64525e752f24f19f3a9e916",
+      "new_sha256": "42c5d6f42233f5b0f185eb84afc52053bd51196a5236358842bd4a78e74f9f6d",
+      "reason": "Relocate derived native input path only; no pixel changes"
+    },
+    {
+      "path": "03_models_features/feature_runs/foundation_20261023T115636/source_RGB_tokens/input_manifest.csv",
+      "old_sha256": "73bfc08c63a43d6203c2a3b82fe313aefdfe3df86c508169f0b815f8f5dfb38e",
+      "new_sha256": "febe03d35d9a236ad81f8a8b798dbcd15df368fc9d34d6cf643ce261cbdb0a7f",
+      "reason": "Relocate derived native input path only; no pixel changes"
+    }
+  ],
+  "raw_snapshot_files": 7630,
+  "excluded_from_main_release": [
+    "Legacy160px preprocessing arrays not used by the DINO recipe",
+    "External dairy images, which have redistribution conditions and no depth",
+    "225 exploratory neural checkpoints: retained at source_project, with audit/summary copied here"
+  ],
+  "dependency_versions": {
+    "torch": "2.7.0+cu128",
+    "torchvision": "0.22.0+cu128",
+    "numpy": "2.0.0",
+    "scipy": "1.16.2",
+    "scikit-learn": "1.7.2",
+    "Pillow": "11.3.0",
+    "requests": "2.34.2",
+    "threadpoolctl": "3.6.0",
+    "timm": "1.0.3"
+  },
+  "manuscript_status": "Research draft to be authored after main experiments; no submission performed"
+}
